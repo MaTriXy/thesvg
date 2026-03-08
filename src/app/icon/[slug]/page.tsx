@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     " Copy as SVG, JSX, Vue component, CDN URL, or Data URI. Open-source.";
 
   return {
-    title: `${icon.title} SVG Icon - thesvg`,
+    title: `${icon.title} SVG Icon - theSVG`,
     description,
     keywords: [icon.title, icon.slug, ...icon.aliases, ...icon.categories, "SVG icon", "free icon", "brand icon"],
     openGraph: {
-      title: `${icon.title} SVG Icon - thesvg`,
+      title: `${icon.title} SVG Icon - theSVG`,
       description,
       url: `https://thesvg.org/icon/${slug}`,
       type: "website",
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary",
-      title: `${icon.title} SVG Icon - thesvg`,
+      title: `${icon.title} SVG Icon - theSVG`,
       description,
       images: [`https://thesvg.org${icon.variants.default}`],
     },

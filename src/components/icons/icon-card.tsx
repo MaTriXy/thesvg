@@ -135,42 +135,42 @@ export const IconCard = memo(function IconCard({
         <Heart className={cn("h-3.5 w-3.5", isFavorite && "fill-current")} />
       </div>
 
-      {/* Icon preview area - generous padding */}
-      <div className="icon-preview-bg flex w-full items-center justify-center rounded-t-xl px-6 py-8">
+      {/* Icon preview area */}
+      <div className="icon-preview-bg flex w-full items-center justify-center rounded-t-xl px-4 py-5 sm:px-6 sm:py-8">
         <img
           src={icon.variants.default}
           alt={icon.title}
-          className="h-12 w-12 object-contain transition-transform duration-200 group-hover:scale-110"
+          className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-110 sm:h-12 sm:w-12"
           loading="lazy"
           decoding="async"
         />
       </div>
 
       {/* Info section */}
-      <div className="flex w-full flex-col items-center gap-0.5 px-3 pt-2.5 pb-2">
-        <span className="w-full truncate text-center text-[13px] font-medium text-foreground">
+      <div className="flex w-full flex-col items-center gap-0.5 px-2 pt-2 pb-1.5 sm:px-3 sm:pt-2.5 sm:pb-2">
+        <span className="w-full truncate text-center text-xs font-medium text-foreground sm:text-[13px]">
           {icon.title}
         </span>
-        <span className="text-[10px] text-muted-foreground">
+        <span className="text-[9px] text-muted-foreground sm:text-[10px]">
           {primaryCategory || icon.slug}
         </span>
       </div>
 
-      {/* Action bar - subtle bottom section */}
-      <div className="flex w-full items-center justify-center gap-1 border-t border-border/30 px-2 py-2">
+      {/* Action bar */}
+      <div className="flex w-full items-center justify-center gap-0.5 border-t border-border/30 px-1.5 py-1.5 sm:gap-1 sm:px-2 sm:py-2">
         <div
           onClick={handleCopy}
           role="button"
           tabIndex={-1}
           aria-label="Copy SVG"
-          className="flex h-7 flex-1 items-center justify-center gap-1.5 rounded-lg text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+          className="flex h-7 flex-1 items-center justify-center gap-1 rounded-lg text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
         >
           {copied ? (
             <Check className="h-3.5 w-3.5 text-green-500" />
           ) : (
             <Copy className="h-3.5 w-3.5" />
           )}
-          <span className="text-[10px] font-medium">Copy</span>
+          <span className="hidden text-[10px] font-medium sm:inline">Copy</span>
         </div>
         <div
           onClick={handleDownload}

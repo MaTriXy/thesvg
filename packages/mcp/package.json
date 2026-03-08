@@ -1,0 +1,49 @@
+{
+  "name": "@thesvg/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for searching and fetching brand SVGs from thesvg.org",
+  "type": "module",
+  "license": "MIT",
+  "author": "thesvg.org",
+  "homepage": "https://thesvg.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thesvg/thesvg.git",
+    "directory": "packages/mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/thesvg/thesvg/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "svg",
+    "icons",
+    "brand",
+    "logos",
+    "ai",
+    "claude"
+  ],
+  "bin": {
+    "thesvg-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

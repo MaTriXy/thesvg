@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <!-- theSVG Logo Wordmark (horizontal) - for light backgrounds -->
+  <!-- Icon -->
+  <rect width="56" height="56" rx="12" fill="#09090B"/>
+  <rect x="20" y="9" width="24" height="24" rx="4.5" fill="#7C2D12"/>
+  <rect x="16.1" y="13" width="24" height="24" rx="4.5" fill="#C2410C"/>
+  <rect x="12.2" y="17" width="24" height="24" rx="4.5" fill="#F97316"/>
+  <path d="M20.5 27.2 L18.3 28.8 L20.5 30.4" stroke="#FED7AA" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M27.9 27.2 L30.1 28.8 L27.9 30.4" stroke="#FED7AA" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="25.3" y1="26.7" x2="23.1" y2="30.9" stroke="#FED7AA" stroke-width="0.45" stroke-linecap="round" opacity="0.5"/>
+  <!-- Wordmark text - dark for light bg -->
+  <text x="72" y="39" font-family="-apple-system,BlinkMacSystemFont,'Inter',sans-serif" font-size="28" font-weight="600" letter-spacing="-0.5" fill="#09090B">theSVG</text>
+</svg>

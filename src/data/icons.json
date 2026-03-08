@@ -1,5 +1,27 @@
 [
   {
+    "slug": "thesvg",
+    "title": "theSVG",
+    "aliases": [
+      "The SVG",
+      "thesvg.org"
+    ],
+    "hex": "F97316",
+    "categories": [
+      "Design",
+      "Devtool",
+      "Library"
+    ],
+    "variants": {
+      "default": "/icons/thesvg/default.svg",
+      "light": "/icons/thesvg/light.svg",
+      "wordmark": "/icons/thesvg/wordmark.svg",
+      "wordmarkDark": "/icons/thesvg/wordmark-dark.svg"
+    },
+    "license": "MIT",
+    "url": "https://thesvg.org"
+  },
+  {
     "slug": "dotenv",
     "title": ".ENV",
     "aliases": [
@@ -54,7 +76,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/01dotai/color.svg"
+      "default": "/icons/01dotai/color.svg",
+      "color": "/icons/01dotai/color.svg",
+      "mono-lobe": "/icons/01dotai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lingyiwanwu.com/"
@@ -107,7 +131,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/11x/mono-lobe.svg"
+      "default": "/icons/11x/mono-lobe.svg",
+      "mono-lobe": "/icons/11x/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://11x.ai"
@@ -192,7 +217,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/302dotai/color.svg"
+      "default": "/icons/302dotai/color.svg",
+      "color": "/icons/302dotai/color.svg",
+      "mono-lobe": "/icons/302dotai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://302.ai/"
@@ -498,7 +525,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ace/mono-lobe.svg"
+      "default": "/icons/ace/mono-lobe.svg",
+      "mono-lobe": "/icons/ace/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/ace-step/ACE-Step"
@@ -999,7 +1027,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/ag-ui/mono-lobe.svg"
+      "default": "/icons/ag-ui/mono-lobe.svg",
+      "mono-lobe": "/icons/ag-ui/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ag-ui.com"
@@ -1075,7 +1104,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ai-studio-google/mono-lobe.svg"
+      "default": "/icons/ai-studio-google/mono-lobe.svg",
+      "mono-lobe": "/icons/ai-studio-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aistudio.google.com"
@@ -1089,7 +1119,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ai2/color.svg"
+      "default": "/icons/ai2/color.svg",
+      "color": "/icons/ai2/color.svg",
+      "mono-lobe": "/icons/ai2/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://allenai.org/"
@@ -1103,7 +1135,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ai21labs-jamba/mono-lobe.svg"
+      "default": "/icons/ai21labs-jamba/mono-lobe.svg",
+      "mono-lobe": "/icons/ai21labs-jamba/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huggingface.co/ai21labs"
@@ -1117,7 +1150,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ai360-360/color.svg"
+      "default": "/icons/ai360-360/color.svg",
+      "color": "/icons/ai360-360/color.svg",
+      "mono-lobe": "/icons/ai360-360/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.360.com/"
@@ -1146,7 +1181,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/aihubmix/color.svg"
+      "default": "/icons/aihubmix/color.svg",
+      "color": "/icons/aihubmix/color.svg",
+      "mono-lobe": "/icons/aihubmix/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aihubmix.com"
@@ -1160,7 +1197,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/aimass/color.svg"
+      "default": "/icons/aimass/color.svg",
+      "color": "/icons/aimass/color.svg",
+      "mono-lobe": "/icons/aimass/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai-maas.wair.ac.cn"
@@ -1187,7 +1226,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/aionlabs/color.svg"
+      "default": "/icons/aionlabs/color.svg",
+      "color": "/icons/aionlabs/color.svg",
+      "mono-lobe": "/icons/aionlabs/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aionlabs.ai"
@@ -1467,7 +1508,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/akashchat/color.svg"
+      "default": "/icons/akashchat/color.svg",
+      "color": "/icons/akashchat/color.svg",
+      "mono-lobe": "/icons/akashchat/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://chatapi.akash.network"
@@ -1588,7 +1631,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/alephalpha/mono-lobe.svg"
+      "default": "/icons/alephalpha/mono-lobe.svg",
+      "mono-lobe": "/icons/alephalpha/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aleph-alpha.com"
@@ -1647,7 +1691,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/alibaba/color.svg"
+      "default": "/icons/alibaba/color.svg",
+      "color": "/icons/alibaba/color.svg",
+      "mono-lobe": "/icons/alibaba/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://alibaba.com"
@@ -1687,7 +1733,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/alibabacloud/color.svg"
+      "default": "/icons/alibabacloud/color.svg",
+      "color": "/icons/alibabacloud/color.svg",
+      "mono-lobe": "/icons/alibabacloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aliyun.com"
@@ -2287,7 +2335,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/antgroup/color.svg"
+      "default": "/icons/antgroup/color.svg",
+      "color": "/icons/antgroup/color.svg",
+      "mono-lobe": "/icons/antgroup/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://antgroup.com"
@@ -2321,7 +2371,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/antigravity-google/color.svg"
+      "default": "/icons/antigravity-google/color.svg",
+      "color": "/icons/antigravity-google/color.svg",
+      "mono-lobe": "/icons/antigravity-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://antigravity.google"
@@ -2374,7 +2426,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/anyscale/color.svg"
+      "default": "/icons/anyscale/color.svg",
+      "color": "/icons/anyscale/color.svg",
+      "mono-lobe": "/icons/anyscale/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://anyscale.com"
@@ -3305,7 +3359,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/arcee/color.svg"
+      "default": "/icons/arcee/color.svg",
+      "color": "/icons/arcee/color.svg",
+      "mono-lobe": "/icons/arcee/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://arcee.ai/"
@@ -3578,9 +3634,15 @@
   {
     "slug": "askverdict-ai",
     "title": "AskVerdict AI",
-    "aliases": ["askverdict", "verdict"],
+    "aliases": [
+      "askverdict",
+      "verdict"
+    ],
     "hex": "E8A317",
-    "categories": ["AI", "Software"],
+    "categories": [
+      "AI",
+      "Software"
+    ],
     "variants": {
       "default": "/icons/askverdict-ai/default.svg",
       "mono": "/icons/askverdict-ai/mono.svg",
@@ -3673,7 +3735,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/assemblyai/color.svg"
+      "default": "/icons/assemblyai/color.svg",
+      "color": "/icons/assemblyai/color.svg",
+      "mono-lobe": "/icons/assemblyai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://assemblyai.com"
@@ -3813,7 +3877,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/atlascloud/mono-lobe.svg"
+      "default": "/icons/atlascloud/mono-lobe.svg",
+      "mono-lobe": "/icons/atlascloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://atlascloud.ai"
@@ -4166,7 +4231,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/automatic1111-sd-webui/color.svg"
+      "default": "/icons/automatic1111-sd-webui/color.svg",
+      "color": "/icons/automatic1111-sd-webui/color.svg",
+      "mono-lobe": "/icons/automatic1111-sd-webui/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui"
@@ -4327,7 +4394,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/aws/color.svg"
+      "default": "/icons/aws/color.svg",
+      "color": "/icons/aws/color.svg",
+      "mono-lobe": "/icons/aws/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aws.amazon.com"
@@ -4413,7 +4482,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/aya-cohere/color.svg"
+      "default": "/icons/aya-cohere/color.svg",
+      "color": "/icons/aya-cohere/color.svg",
+      "mono-lobe": "/icons/aya-cohere/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cohere.com/research/aya"
@@ -4427,7 +4498,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/azureai/color.svg"
+      "default": "/icons/azureai/color.svg",
+      "color": "/icons/azureai/color.svg",
+      "mono-lobe": "/icons/azureai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.azure.com"
@@ -4454,7 +4527,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/baai/mono-lobe.svg"
+      "default": "/icons/baai/mono-lobe.svg",
+      "mono-lobe": "/icons/baai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://baai.ac.cn"
@@ -4590,7 +4664,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/baichuan/color.svg"
+      "default": "/icons/baichuan/color.svg",
+      "color": "/icons/baichuan/color.svg",
+      "mono-lobe": "/icons/baichuan/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://baichuan-ai.com"
@@ -4619,7 +4695,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/baiducloud/color.svg"
+      "default": "/icons/baiducloud/color.svg",
+      "color": "/icons/baiducloud/color.svg",
+      "mono-lobe": "/icons/baiducloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cloud.baidu.com"
@@ -4633,7 +4711,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/bailian/color.svg"
+      "default": "/icons/bailian/color.svg",
+      "color": "/icons/bailian/color.svg",
+      "mono-lobe": "/icons/bailian/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://bailian.console.aliyun.com"
@@ -4807,7 +4887,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/baseten/mono-lobe.svg"
+      "default": "/icons/baseten/mono-lobe.svg",
+      "mono-lobe": "/icons/baseten/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://baseten.co"
@@ -5003,7 +5084,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/bedrock-aws/color.svg"
+      "default": "/icons/bedrock-aws/color.svg",
+      "color": "/icons/bedrock-aws/color.svg",
+      "mono-lobe": "/icons/bedrock-aws/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://aws.amazon.com/bedrock"
@@ -5279,7 +5362,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/bilibili-index-index-team/mono-lobe.svg"
+      "default": "/icons/bilibili-index-index-team/mono-lobe.svg",
+      "mono-lobe": "/icons/bilibili-index-index-team/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huggingface.co/IndexTeam"
@@ -5625,7 +5709,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/black-forest-labs-bfl/mono-lobe.svg"
+      "default": "/icons/black-forest-labs-bfl/mono-lobe.svg",
+      "mono-lobe": "/icons/black-forest-labs-bfl/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://bfl.ai"
@@ -6707,7 +6792,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/burncloud/color.svg"
+      "default": "/icons/burncloud/color.svg",
+      "color": "/icons/burncloud/color.svg",
+      "mono-lobe": "/icons/burncloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.burncloud.com"
@@ -7112,7 +7199,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/capcut/mono-lobe.svg"
+      "default": "/icons/capcut/mono-lobe.svg",
+      "mono-lobe": "/icons/capcut/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://capcut.com"
@@ -7409,7 +7497,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/centml/color.svg"
+      "default": "/icons/centml/color.svg",
+      "color": "/icons/centml/color.svg",
+      "mono-lobe": "/icons/centml/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://centml.ai"
@@ -7449,7 +7539,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/cerebras/color.svg"
+      "default": "/icons/cerebras/color.svg",
+      "color": "/icons/cerebras/color.svg",
+      "mono-lobe": "/icons/cerebras/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cerebras.ai"
@@ -7625,7 +7717,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/chatglm/color.svg"
+      "default": "/icons/chatglm/color.svg",
+      "color": "/icons/chatglm/color.svg",
+      "mono-lobe": "/icons/chatglm/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/THUDM/ChatGLM-6B"
@@ -7743,7 +7837,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/cherry-studio/color.svg"
+      "default": "/icons/cherry-studio/color.svg",
+      "color": "/icons/cherry-studio/color.svg",
+      "mono-lobe": "/icons/cherry-studio/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cherry-ai.com"
@@ -8064,7 +8160,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/civitai/color.svg"
+      "default": "/icons/civitai/color.svg",
+      "color": "/icons/civitai/color.svg",
+      "mono-lobe": "/icons/civitai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://civitai.com"
@@ -8163,7 +8261,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/claude-code/color.svg"
+      "default": "/icons/claude-code/color.svg",
+      "color": "/icons/claude-code/color.svg",
+      "mono-lobe": "/icons/claude-code/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://code.claude.com"
@@ -8267,7 +8367,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/clipdrop/mono-lobe.svg"
+      "default": "/icons/clipdrop/mono-lobe.svg",
+      "mono-lobe": "/icons/clipdrop/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://clipdrop.co"
@@ -8842,7 +8943,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/codeflicker/color.svg"
+      "default": "/icons/codeflicker/color.svg",
+      "color": "/icons/codeflicker/color.svg",
+      "mono-lobe": "/icons/codeflicker/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://codeflicker.ai"
@@ -8882,7 +8985,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/codegeex/color.svg"
+      "default": "/icons/codegeex/color.svg",
+      "color": "/icons/codegeex/color.svg",
+      "mono-lobe": "/icons/codegeex/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://codegeex.cn/"
@@ -9095,7 +9200,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/codex-openai/color.svg"
+      "default": "/icons/codex-openai/color.svg",
+      "color": "/icons/codex-openai/color.svg",
+      "mono-lobe": "/icons/codex-openai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://openai.com/codex"
@@ -9202,7 +9309,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/cogvideo/color.svg"
+      "default": "/icons/cogvideo/color.svg",
+      "color": "/icons/cogvideo/color.svg"
     },
     "license": "MIT",
     "url": "https://github.com/THUDM/CogVideo"
@@ -9216,7 +9324,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/cogview/color.svg"
+      "default": "/icons/cogview/color.svg",
+      "color": "/icons/cogview/color.svg"
     },
     "license": "MIT",
     "url": "https://github.com/THUDM/CogView3"
@@ -9276,7 +9385,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/colab-google/color.svg"
+      "default": "/icons/colab-google/color.svg",
+      "color": "/icons/colab-google/color.svg",
+      "mono-lobe": "/icons/colab-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://colab.research.google.com/"
@@ -9307,7 +9418,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/comet-api/color.svg"
+      "default": "/icons/comet-api/color.svg",
+      "color": "/icons/comet-api/color.svg",
+      "mono-lobe": "/icons/comet-api/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cometapi.com/"
@@ -9321,7 +9434,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/comfyui/color.svg"
+      "default": "/icons/comfyui/color.svg",
+      "color": "/icons/comfyui/color.svg",
+      "mono-lobe": "/icons/comfyui/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://comfy.org"
@@ -9361,7 +9476,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/commanda-cohere/color.svg"
+      "default": "/icons/commanda-cohere/color.svg",
+      "color": "/icons/commanda-cohere/color.svg",
+      "mono-lobe": "/icons/commanda-cohere/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cohere.com/blog/command"
@@ -9790,7 +9907,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/copilotkit/color.svg"
+      "default": "/icons/copilotkit/color.svg",
+      "color": "/icons/copilotkit/color.svg",
+      "mono-lobe": "/icons/copilotkit/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://copilotkit.ai"
@@ -9817,7 +9936,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/coqui/color.svg"
+      "default": "/icons/coqui/color.svg",
+      "color": "/icons/coqui/color.svg",
+      "mono-lobe": "/icons/coqui/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/coqui-ai/TTS"
@@ -10248,7 +10369,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/crusoe/color.svg"
+      "default": "/icons/crusoe/color.svg",
+      "color": "/icons/crusoe/color.svg",
+      "mono-lobe": "/icons/crusoe/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://crusoe.ai"
@@ -10506,7 +10629,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/cybercut/mono-lobe.svg"
+      "default": "/icons/cybercut/mono-lobe.svg",
+      "mono-lobe": "/icons/cybercut/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cybercut.ai"
@@ -10716,7 +10840,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/dall-e-openai/color.svg"
+      "default": "/icons/dall-e-openai/color.svg",
+      "color": "/icons/dall-e-openai/color.svg",
+      "mono-lobe": "/icons/dall-e-openai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://openai.com/dall-e-3"
@@ -11068,7 +11194,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/dbrx-databricks/color.svg"
+      "default": "/icons/dbrx-databricks/color.svg",
+      "color": "/icons/dbrx-databricks/color.svg",
+      "mono-lobe": "/icons/dbrx-databricks/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://databricks.com"
@@ -11163,7 +11291,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/deep-cogito/color.svg"
+      "default": "/icons/deep-cogito/color.svg",
+      "color": "/icons/deep-cogito/color.svg",
+      "mono-lobe": "/icons/deep-cogito/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://deepcogito.com"
@@ -11177,7 +11307,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/deepai/mono-lobe.svg"
+      "default": "/icons/deepai/mono-lobe.svg",
+      "mono-lobe": "/icons/deepai/mono-lobe.svg"
     },
     "license": "MIT"
   },
@@ -11230,7 +11361,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/deepinfra/color.svg"
+      "default": "/icons/deepinfra/color.svg",
+      "color": "/icons/deepinfra/color.svg",
+      "mono-lobe": "/icons/deepinfra/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://deepinfra.com"
@@ -11274,7 +11407,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/deepmind-google/color.svg"
+      "default": "/icons/deepmind-google/color.svg",
+      "color": "/icons/deepmind-google/color.svg",
+      "mono-lobe": "/icons/deepmind-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://deepmind.google"
@@ -11788,7 +11923,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/dify/color.svg"
+      "default": "/icons/dify/color.svg",
+      "color": "/icons/dify/color.svg",
+      "mono-lobe": "/icons/dify/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://dify.ai"
@@ -12147,7 +12284,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/doc2x/color.svg"
+      "default": "/icons/doc2x/color.svg",
+      "color": "/icons/doc2x/color.svg",
+      "mono-lobe": "/icons/doc2x/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://doc2x.noedgeai.com"
@@ -12190,7 +12329,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/docsearch/color.svg"
+      "default": "/icons/docsearch/color.svg",
+      "color": "/icons/docsearch/color.svg",
+      "mono-lobe": "/icons/docsearch/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://docsearch.algolia.com"
@@ -12370,7 +12511,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/dolphin-dphnai/mono-lobe.svg"
+      "default": "/icons/dolphin-dphnai/mono-lobe.svg",
+      "mono-lobe": "/icons/dolphin-dphnai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://dphn.ai"
@@ -12452,7 +12594,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/doubao/color.svg"
+      "default": "/icons/doubao/color.svg",
+      "color": "/icons/doubao/color.svg",
+      "mono-lobe": "/icons/doubao/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://team.doubao.com"
@@ -12558,7 +12702,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/dreammachine-luma/mono-lobe.svg"
+      "default": "/icons/dreammachine-luma/mono-lobe.svg",
+      "mono-lobe": "/icons/dreammachine-luma/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lumalabs.ai/dream-machine"
@@ -14003,7 +14148,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/essential-ai/color.svg"
+      "default": "/icons/essential-ai/color.svg",
+      "color": "/icons/essential-ai/color.svg",
+      "mono-lobe": "/icons/essential-ai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://essential.ai"
@@ -14153,7 +14300,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/exa/color.svg"
+      "default": "/icons/exa/color.svg",
+      "color": "/icons/exa/color.svg",
+      "mono-lobe": "/icons/exa/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://exa.ai"
@@ -14497,7 +14646,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/fal/color.svg"
+      "default": "/icons/fal/color.svg",
+      "color": "/icons/fal/color.svg",
+      "mono-lobe": "/icons/fal/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://fal.ai"
@@ -14658,7 +14809,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/fastgpt/color.svg"
+      "default": "/icons/fastgpt/color.svg",
+      "color": "/icons/fastgpt/color.svg",
+      "mono-lobe": "/icons/fastgpt/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://tryfastgpt.ai"
@@ -14770,7 +14923,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/featherlessdotai/color.svg"
+      "default": "/icons/featherlessdotai/color.svg",
+      "color": "/icons/featherlessdotai/color.svg",
+      "mono-lobe": "/icons/featherlessdotai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://featherless.ai"
@@ -15159,7 +15314,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/firefly-adobe/color.svg"
+      "default": "/icons/firefly-adobe/color.svg",
+      "color": "/icons/firefly-adobe/color.svg",
+      "mono-lobe": "/icons/firefly-adobe/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://firefly.adobe.com"
@@ -15241,7 +15398,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/fireworks/color.svg"
+      "default": "/icons/fireworks/color.svg",
+      "color": "/icons/fireworks/color.svg",
+      "mono-lobe": "/icons/fireworks/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://fireworks.ai"
@@ -15296,7 +15455,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/fishaudio-bert/mono-lobe.svg"
+      "default": "/icons/fishaudio-bert/mono-lobe.svg",
+      "mono-lobe": "/icons/fishaudio-bert/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/fishaudio"
@@ -15513,7 +15673,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/flora/mono-lobe.svg"
+      "default": "/icons/flora/mono-lobe.svg",
+      "mono-lobe": "/icons/flora/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://florafauna.ai"
@@ -15570,7 +15731,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/flowith/mono-lobe.svg"
+      "default": "/icons/flowith/mono-lobe.svg",
+      "mono-lobe": "/icons/flowith/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://flowith.io"
@@ -15654,7 +15816,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/flux-black-forest-labs/mono-lobe.svg"
+      "default": "/icons/flux-black-forest-labs/mono-lobe.svg",
+      "mono-lobe": "/icons/flux-black-forest-labs/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://blackforestlabs.ai"
@@ -16315,7 +16478,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/friendli/mono-lobe.svg"
+      "default": "/icons/friendli/mono-lobe.svg",
+      "mono-lobe": "/icons/friendli/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://friendli.ai"
@@ -16791,7 +16955,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/gemini-google/color.svg"
+      "default": "/icons/gemini-google/color.svg",
+      "color": "/icons/gemini-google/color.svg",
+      "mono-lobe": "/icons/gemini-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://deepmind.google/technologies/gemini"
@@ -16805,7 +16971,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/gemma-google/color.svg"
+      "default": "/icons/gemma-google/color.svg",
+      "color": "/icons/gemma-google/color.svg",
+      "mono-lobe": "/icons/gemma-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.google.dev/gemma"
@@ -17161,7 +17329,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/giteeai/mono-lobe.svg"
+      "default": "/icons/giteeai/mono-lobe.svg",
+      "mono-lobe": "/icons/giteeai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai-assets.gitee.com/"
@@ -17333,7 +17502,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/glama/mono-lobe.svg"
+      "default": "/icons/glama/mono-lobe.svg",
+      "mono-lobe": "/icons/glama/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://glama.ai"
@@ -17412,7 +17582,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/glif/mono-lobe.svg"
+      "default": "/icons/glif/mono-lobe.svg",
+      "mono-lobe": "/icons/glif/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://glif.app"
@@ -17439,7 +17610,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/glm-v/color.svg"
+      "default": "/icons/glm-v/color.svg",
+      "color": "/icons/glm-v/color.svg",
+      "mono-lobe": "/icons/glm-v/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking"
@@ -18663,7 +18836,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/googlecloud/color.svg"
+      "default": "/icons/googlecloud/color.svg",
+      "color": "/icons/googlecloud/color.svg",
+      "mono-lobe": "/icons/googlecloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cloud.google.com"
@@ -18677,7 +18852,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/goose-codename/mono-lobe.svg"
+      "default": "/icons/goose-codename/mono-lobe.svg",
+      "mono-lobe": "/icons/goose-codename/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://block.github.io/goose"
@@ -18952,7 +19128,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/greptile/color.svg"
+      "default": "/icons/greptile/color.svg",
+      "color": "/icons/greptile/color.svg",
+      "mono-lobe": "/icons/greptile/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://greptile.com"
@@ -19037,7 +19215,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/grok-xai/mono-lobe.svg"
+      "default": "/icons/grok-xai/mono-lobe.svg",
+      "mono-lobe": "/icons/grok-xai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://grok.x.ai"
@@ -19505,7 +19684,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/hailuo/color.svg"
+      "default": "/icons/hailuo/color.svg",
+      "color": "/icons/hailuo/color.svg",
+      "mono-lobe": "/icons/hailuo/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://hailuoai.video"
@@ -19519,7 +19700,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/haiper/mono-lobe.svg"
+      "default": "/icons/haiper/mono-lobe.svg",
+      "mono-lobe": "/icons/haiper/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://haiper.ai"
@@ -19918,7 +20100,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/hedra/mono-lobe.svg"
+      "default": "/icons/hedra/mono-lobe.svg",
+      "mono-lobe": "/icons/hedra/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://hedra.com"
@@ -20218,7 +20401,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/higress/color.svg"
+      "default": "/icons/higress/color.svg",
+      "color": "/icons/higress/color.svg",
+      "mono-lobe": "/icons/higress/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://higress.cn/"
@@ -20757,7 +20942,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/huaweicloud/color.svg"
+      "default": "/icons/huaweicloud/color.svg",
+      "color": "/icons/huaweicloud/color.svg",
+      "mono-lobe": "/icons/huaweicloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huaweicloud.com"
@@ -20801,7 +20988,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/huggingface/color.svg"
+      "default": "/icons/huggingface/color.svg",
+      "color": "/icons/huggingface/color.svg",
+      "mono-lobe": "/icons/huggingface/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huggingface.co"
@@ -20899,7 +21088,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/hunyuan/color.svg"
+      "default": "/icons/hunyuan/color.svg",
+      "color": "/icons/hunyuan/color.svg",
+      "mono-lobe": "/icons/hunyuan/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://hunyuan.tencent.com"
@@ -20939,7 +21130,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/hyperbolic/color.svg"
+      "default": "/icons/hyperbolic/color.svg",
+      "color": "/icons/hyperbolic/color.svg",
+      "mono-lobe": "/icons/hyperbolic/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://hyperbolic.xyz"
@@ -21097,7 +21290,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ibm-granite/mono-lobe.svg"
+      "default": "/icons/ibm-granite/mono-lobe.svg",
+      "mono-lobe": "/icons/ibm-granite/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huggingface.co/ibm-granite"
@@ -21267,7 +21461,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/ideogram/mono-lobe.svg"
+      "default": "/icons/ideogram/mono-lobe.svg",
+      "mono-lobe": "/icons/ideogram/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ideogram.ai"
@@ -21309,7 +21504,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/iflytekcloud/color.svg"
+      "default": "/icons/iflytekcloud/color.svg",
+      "color": "/icons/iflytekcloud/color.svg",
+      "mono-lobe": "/icons/iflytekcloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://xfyun.cn"
@@ -21575,7 +21772,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/inception-labs/mono-lobe.svg"
+      "default": "/icons/inception-labs/mono-lobe.svg",
+      "mono-lobe": "/icons/inception-labs/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://inceptionlabs.ai"
@@ -21696,7 +21894,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/inference/mono-lobe.svg"
+      "default": "/icons/inference/mono-lobe.svg",
+      "mono-lobe": "/icons/inference/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://inference.net"
@@ -21710,7 +21909,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/infermatic/color.svg"
+      "default": "/icons/infermatic/color.svg",
+      "color": "/icons/infermatic/color.svg",
+      "mono-lobe": "/icons/infermatic/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://infermatic.ai"
@@ -21724,7 +21925,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/infinigence/color.svg"
+      "default": "/icons/infinigence/color.svg",
+      "color": "/icons/infinigence/color.svg",
+      "mono-lobe": "/icons/infinigence/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cloud.infini-ai.com"
@@ -21764,7 +21967,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/inflection/mono-lobe.svg"
+      "default": "/icons/inflection/mono-lobe.svg",
+      "mono-lobe": "/icons/inflection/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://inflection.ai"
@@ -22245,7 +22449,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/internlm/color.svg"
+      "default": "/icons/internlm/color.svg",
+      "color": "/icons/internlm/color.svg",
+      "mono-lobe": "/icons/internlm/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://internlm.intern-ai.org.cn"
@@ -22973,7 +23179,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/jimeng/color.svg"
+      "default": "/icons/jimeng/color.svg",
+      "color": "/icons/jimeng/color.svg",
+      "mono-lobe": "/icons/jimeng/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://jimeng.jianying.com"
@@ -22987,7 +23195,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/jina-ai/mono-lobe.svg"
+      "default": "/icons/jina-ai/mono-lobe.svg",
+      "mono-lobe": "/icons/jina-ai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://jina.ai"
@@ -23353,7 +23562,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/junie/color.svg"
+      "default": "/icons/junie/color.svg",
+      "color": "/icons/junie/color.svg",
+      "mono-lobe": "/icons/junie/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://jetbrains.com/junie"
@@ -24274,7 +24485,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/kling/color.svg"
+      "default": "/icons/kling/color.svg",
+      "color": "/icons/kling/color.svg",
+      "mono-lobe": "/icons/kling/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://klingai.com"
@@ -24314,7 +24527,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/kluster/color.svg"
+      "default": "/icons/kluster/color.svg",
+      "color": "/icons/kluster/color.svg",
+      "mono-lobe": "/icons/kluster/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://kluster.ai"
@@ -24530,7 +24745,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/kolors/color.svg"
+      "default": "/icons/kolors/color.svg",
+      "color": "/icons/kolors/color.svg",
+      "mono-lobe": "/icons/kolors/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://kolors.kuaishou.com"
@@ -24669,7 +24886,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/krea/mono-lobe.svg"
+      "default": "/icons/krea/mono-lobe.svg",
+      "mono-lobe": "/icons/krea/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://krea.ai"
@@ -24856,7 +25074,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/kwaikat-kat-coder/mono-lobe.svg"
+      "default": "/icons/kwaikat-kat-coder/mono-lobe.svg",
+      "mono-lobe": "/icons/kwaikat-kat-coder/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://streamlake.ai/product/kat-coder"
@@ -24870,7 +25089,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/kwaipilot/color.svg"
+      "default": "/icons/kwaipilot/color.svg",
+      "color": "/icons/kwaipilot/color.svg",
+      "mono-lobe": "/icons/kwaipilot/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://kwaipilot.ai"
@@ -24954,7 +25175,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/lambda/mono-lobe.svg"
+      "default": "/icons/lambda/mono-lobe.svg",
+      "mono-lobe": "/icons/lambda/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lambdalabs.com"
@@ -25009,7 +25231,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/langfuse/color.svg"
+      "default": "/icons/langfuse/color.svg",
+      "color": "/icons/langfuse/color.svg",
+      "mono-lobe": "/icons/langfuse/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://langfuse.com"
@@ -25036,7 +25260,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/langgraph-langchain/color.svg"
+      "default": "/icons/langgraph-langchain/color.svg",
+      "color": "/icons/langgraph-langchain/color.svg",
+      "mono-lobe": "/icons/langgraph-langchain/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://langchain.com/LangGraph"
@@ -25050,7 +25276,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/langsmith-langchain/color.svg"
+      "default": "/icons/langsmith-langchain/color.svg",
+      "color": "/icons/langsmith-langchain/color.svg",
+      "mono-lobe": "/icons/langsmith-langchain/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://langchain.com/langsmith"
@@ -25447,7 +25675,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/leptonai/color.svg"
+      "default": "/icons/leptonai/color.svg",
+      "color": "/icons/leptonai/color.svg",
+      "mono-lobe": "/icons/leptonai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lepton.ai"
@@ -25581,7 +25811,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/lg-ai-kmmlu-exaone/color.svg"
+      "default": "/icons/lg-ai-kmmlu-exaone/color.svg",
+      "color": "/icons/lg-ai-kmmlu-exaone/color.svg",
+      "mono-lobe": "/icons/lg-ai-kmmlu-exaone/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lgresearch.ai"
@@ -25890,7 +26122,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/lightricks/mono-lobe.svg"
+      "default": "/icons/lightricks/mono-lobe.svg",
+      "mono-lobe": "/icons/lightricks/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lightricks.com"
@@ -26209,7 +26442,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/liquid/mono-lobe.svg"
+      "default": "/icons/liquid/mono-lobe.svg",
+      "mono-lobe": "/icons/liquid/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://liquid.ai"
@@ -26362,7 +26596,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/llamaindex/color.svg"
+      "default": "/icons/llamaindex/color.svg",
+      "color": "/icons/llamaindex/color.svg",
+      "mono-lobe": "/icons/llamaindex/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://llamaindex.ai"
@@ -26376,7 +26612,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/llava/color.svg"
+      "default": "/icons/llava/color.svg",
+      "color": "/icons/llava/color.svg",
+      "mono-lobe": "/icons/llava/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/haotian-liu/LLaVA"
@@ -26403,7 +26641,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/lm-studio/mono-lobe.svg"
+      "default": "/icons/lm-studio/mono-lobe.svg",
+      "mono-lobe": "/icons/lm-studio/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lmstudio.ai"
@@ -26430,7 +26669,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/lobehub/color.svg"
+      "default": "/icons/lobehub/color.svg",
+      "color": "/icons/lobehub/color.svg",
+      "mono-lobe": "/icons/lobehub/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lobehub.com"
@@ -26564,7 +26805,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/longcat/color.svg"
+      "default": "/icons/longcat/color.svg",
+      "color": "/icons/longcat/color.svg",
+      "mono-lobe": "/icons/longcat/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://longcat.chat/"
@@ -26747,7 +26990,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/lovart/mono-lobe.svg"
+      "default": "/icons/lovart/mono-lobe.svg",
+      "mono-lobe": "/icons/lovart/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lovart.ai"
@@ -26898,7 +27142,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/luma/color.svg"
+      "default": "/icons/luma/color.svg",
+      "color": "/icons/luma/color.svg",
+      "mono-lobe": "/icons/luma/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://lumalabs.ai"
@@ -27662,7 +27908,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/mastra/mono-lobe.svg"
+      "default": "/icons/mastra/mono-lobe.svg",
+      "mono-lobe": "/icons/mastra/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://mastra.ai"
@@ -27947,7 +28194,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/mcp-model-context-protocol/mono-lobe.svg"
+      "default": "/icons/mcp-model-context-protocol/mono-lobe.svg",
+      "mono-lobe": "/icons/mcp-model-context-protocol/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://modelcontextprotocol.io"
@@ -27961,7 +28209,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/mcpdotso/color.svg"
+      "default": "/icons/mcpdotso/color.svg",
+      "color": "/icons/mcpdotso/color.svg",
+      "mono-lobe": "/icons/mcpdotso/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://mcp.so"
@@ -28235,7 +28485,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/menlo-lucy-jan-nano/color.svg"
+      "default": "/icons/menlo-lucy-jan-nano/color.svg",
+      "color": "/icons/menlo-lucy-jan-nano/color.svg",
+      "mono-lobe": "/icons/menlo-lucy-jan-nano/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://menlo.ai"
@@ -28370,7 +28622,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/metaai/color.svg"
+      "default": "/icons/metaai/color.svg",
+      "color": "/icons/metaai/color.svg",
+      "mono-lobe": "/icons/metaai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://meta.ai"
@@ -28437,7 +28691,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/metagpt/mono-lobe.svg"
+      "default": "/icons/metagpt/mono-lobe.svg",
+      "mono-lobe": "/icons/metagpt/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/FoundationAgents/MetaGPT"
@@ -28673,7 +28928,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/microsoft-bing/color.svg"
+      "default": "/icons/microsoft-bing/color.svg",
+      "color": "/icons/microsoft-bing/color.svg",
+      "mono-lobe": "/icons/microsoft-bing/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://bing.com"
@@ -29262,7 +29519,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/mistral/color.svg"
+      "default": "/icons/mistral/color.svg",
+      "color": "/icons/mistral/color.svg",
+      "mono-lobe": "/icons/mistral/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://mistral.ai"
@@ -29777,7 +30036,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/moonshot/mono-lobe.svg"
+      "default": "/icons/moonshot/mono-lobe.svg",
+      "mono-lobe": "/icons/moonshot/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://moonshot.cn"
@@ -29817,7 +30077,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/morph/color.svg"
+      "default": "/icons/morph/color.svg",
+      "color": "/icons/morph/color.svg",
+      "mono-lobe": "/icons/morph/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://morphllm.com"
@@ -30176,7 +30438,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/myshell/color.svg"
+      "default": "/icons/myshell/color.svg",
+      "color": "/icons/myshell/color.svg",
+      "mono-lobe": "/icons/myshell/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://myshell.ai"
@@ -30350,7 +30614,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/nano-banana-google/color.svg"
+      "default": "/icons/nano-banana-google/color.svg",
+      "color": "/icons/nano-banana-google/color.svg",
+      "mono-lobe": "/icons/nano-banana-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://gemini.google/overview/image-generation"
@@ -30552,7 +30818,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/nebius/mono-lobe.svg"
+      "default": "/icons/nebius/mono-lobe.svg",
+      "mono-lobe": "/icons/nebius/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://nebius.com"
@@ -30847,7 +31114,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/new-api/color.svg"
+      "default": "/icons/new-api/color.svg",
+      "color": "/icons/new-api/color.svg",
+      "mono-lobe": "/icons/new-api/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://newapi.ai"
@@ -31579,7 +31848,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/nousresearch-hermes/mono-lobe.svg"
+      "default": "/icons/nousresearch-hermes/mono-lobe.svg",
+      "mono-lobe": "/icons/nousresearch-hermes/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://nousresearch.com"
@@ -31593,7 +31863,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/nova-aws/color.svg"
+      "default": "/icons/nova-aws/color.svg",
+      "color": "/icons/nova-aws/color.svg",
+      "mono-lobe": "/icons/nova-aws/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://nova.amazon.com/"
@@ -31607,7 +31879,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/novelai/mono-lobe.svg"
+      "default": "/icons/novelai/mono-lobe.svg",
+      "mono-lobe": "/icons/novelai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://novelai.net"
@@ -31621,7 +31894,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/novita/color.svg"
+      "default": "/icons/novita/color.svg",
+      "color": "/icons/novita/color.svg",
+      "mono-lobe": "/icons/novita/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://novita.ai/"
@@ -31661,7 +31936,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/nplcloud/color.svg"
+      "default": "/icons/nplcloud/color.svg",
+      "color": "/icons/nplcloud/color.svg",
+      "mono-lobe": "/icons/nplcloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://nlpcloud.com"
@@ -31990,7 +32267,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/nvidia-nemotron/color.svg"
+      "default": "/icons/nvidia-nemotron/color.svg",
+      "color": "/icons/nvidia-nemotron/color.svg",
+      "mono-lobe": "/icons/nvidia-nemotron/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/"
@@ -32682,7 +32961,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/openai-chatgpt/mono-lobe.svg"
+      "default": "/icons/openai-chatgpt/mono-lobe.svg",
+      "mono-lobe": "/icons/openai-chatgpt/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://openai.com"
@@ -32764,7 +33044,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/openchat/color.svg"
+      "default": "/icons/openchat/color.svg",
+      "color": "/icons/openchat/color.svg",
+      "mono-lobe": "/icons/openchat/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://huggingface.co/openchat"
@@ -32778,7 +33060,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/openclaw-moltbot-clawdbot/color.svg"
+      "default": "/icons/openclaw-moltbot-clawdbot/color.svg",
+      "color": "/icons/openclaw-moltbot-clawdbot/color.svg",
+      "mono-lobe": "/icons/openclaw-moltbot-clawdbot/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://openclaw.dev"
@@ -32792,7 +33076,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/opencode/mono-lobe.svg"
+      "default": "/icons/opencode/mono-lobe.svg",
+      "mono-lobe": "/icons/opencode/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://opencode.ai"
@@ -32874,7 +33159,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/openhands/color.svg"
+      "default": "/icons/openhands/color.svg",
+      "color": "/icons/openhands/color.svg",
+      "mono-lobe": "/icons/openhands/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://openhands.dev"
@@ -33197,7 +33484,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/openwebui/mono-lobe.svg"
+      "default": "/icons/openwebui/mono-lobe.svg",
+      "mono-lobe": "/icons/openwebui/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://openwebui.com"
@@ -33858,7 +34146,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/palm-google/color.svg"
+      "default": "/icons/palm-google/color.svg",
+      "color": "/icons/palm-google/color.svg",
+      "mono-lobe": "/icons/palm-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.google/discover/palm2"
@@ -34078,7 +34368,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/parasail/mono-lobe.svg"
+      "default": "/icons/parasail/mono-lobe.svg",
+      "mono-lobe": "/icons/parasail/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://parasail.io/"
@@ -34679,7 +34970,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/phidata/color.svg"
+      "default": "/icons/phidata/color.svg",
+      "color": "/icons/phidata/color.svg",
+      "mono-lobe": "/icons/phidata/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://phidata.com"
@@ -34706,7 +34999,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/phind/mono-lobe.svg"
+      "default": "/icons/phind/mono-lobe.svg",
+      "mono-lobe": "/icons/phind/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://phind.com"
@@ -35015,7 +35309,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/pika/mono-lobe.svg"
+      "default": "/icons/pika/mono-lobe.svg",
+      "mono-lobe": "/icons/pika/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://pika.art"
@@ -35287,7 +35582,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/pixverse/color.svg"
+      "default": "/icons/pixverse/color.svg",
+      "color": "/icons/pixverse/color.svg",
+      "mono-lobe": "/icons/pixverse/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://app.pixverse.ai"
@@ -35478,7 +35775,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/player2/color.svg"
+      "default": "/icons/player2/color.svg",
+      "color": "/icons/player2/color.svg",
+      "mono-lobe": "/icons/player2/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://player2.game"
@@ -35886,7 +36185,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/pollinations/mono-lobe.svg"
+      "default": "/icons/pollinations/mono-lobe.svg",
+      "mono-lobe": "/icons/pollinations/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://pollinations.ai"
@@ -36249,7 +36549,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/ppio/color.svg"
+      "default": "/icons/ppio/color.svg",
+      "color": "/icons/ppio/color.svg",
+      "mono-lobe": "/icons/ppio/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ppinfra.com"
@@ -37176,7 +37478,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/pydanticai/color.svg"
+      "default": "/icons/pydanticai/color.svg",
+      "color": "/icons/pydanticai/color.svg",
+      "mono-lobe": "/icons/pydanticai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.pydantic.dev"
@@ -37454,7 +37758,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/qingyan/color.svg"
+      "default": "/icons/qingyan/color.svg",
+      "color": "/icons/qingyan/color.svg",
+      "mono-lobe": "/icons/qingyan/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://chatglm.cn"
@@ -37468,7 +37774,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/qiniu/color.svg"
+      "default": "/icons/qiniu/color.svg",
+      "color": "/icons/qiniu/color.svg",
+      "mono-lobe": "/icons/qiniu/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://qiniu.com"
@@ -38568,7 +38876,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/recraft/mono-lobe.svg"
+      "default": "/icons/recraft/mono-lobe.svg",
+      "mono-lobe": "/icons/recraft/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://recraft.ai"
@@ -38875,7 +39184,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/relace/mono-lobe.svg"
+      "default": "/icons/relace/mono-lobe.svg",
+      "mono-lobe": "/icons/relace/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://relace.ai"
@@ -39793,7 +40103,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/roocode/mono-lobe.svg"
+      "default": "/icons/roocode/mono-lobe.svg",
+      "mono-lobe": "/icons/roocode/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://roocode.com"
@@ -40036,7 +40347,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/rsshub/color.svg"
+      "default": "/icons/rsshub/color.svg",
+      "color": "/icons/rsshub/color.svg",
+      "mono-lobe": "/icons/rsshub/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://rsshub.app"
@@ -40326,7 +40639,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/rwkv/color.svg"
+      "default": "/icons/rwkv/color.svg",
+      "color": "/icons/rwkv/color.svg",
+      "mono-lobe": "/icons/rwkv/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/RWKV"
@@ -40557,7 +40872,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/sambanova/color.svg"
+      "default": "/icons/sambanova/color.svg",
+      "color": "/icons/sambanova/color.svg",
+      "mono-lobe": "/icons/sambanova/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://sambanova.ai"
@@ -41045,7 +41362,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/search1api/color.svg"
+      "default": "/icons/search1api/color.svg",
+      "color": "/icons/search1api/color.svg",
+      "mono-lobe": "/icons/search1api/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://search1api.com"
@@ -41059,7 +41378,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/searchapi/mono-lobe.svg"
+      "default": "/icons/searchapi/mono-lobe.svg",
+      "mono-lobe": "/icons/searchapi/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://searchapi.io"
@@ -41309,7 +41629,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/sensenova/color.svg"
+      "default": "/icons/sensenova/color.svg",
+      "color": "/icons/sensenova/color.svg",
+      "mono-lobe": "/icons/sensenova/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://platform.sensenova.cn"
@@ -41814,7 +42136,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/siliconcloud-siliconflow/color.svg"
+      "default": "/icons/siliconcloud-siliconflow/color.svg",
+      "color": "/icons/siliconcloud-siliconflow/color.svg",
+      "mono-lobe": "/icons/siliconcloud-siliconflow/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://siliconflow.com"
@@ -42158,7 +42482,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/skywork/color.svg"
+      "default": "/icons/skywork/color.svg",
+      "color": "/icons/skywork/color.svg",
+      "mono-lobe": "/icons/skywork/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://skywork.ai"
@@ -42306,7 +42632,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/smithery/color.svg"
+      "default": "/icons/smithery/color.svg",
+      "color": "/icons/smithery/color.svg",
+      "mono-lobe": "/icons/smithery/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://smithery.ai"
@@ -42832,7 +43160,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/sophnet/color.svg"
+      "default": "/icons/sophnet/color.svg",
+      "color": "/icons/sophnet/color.svg",
+      "mono-lobe": "/icons/sophnet/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://sophnet.com"
@@ -42846,7 +43176,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/sora-openai/color.svg"
+      "default": "/icons/sora-openai/color.svg",
+      "color": "/icons/sora-openai/color.svg",
+      "mono-lobe": "/icons/sora-openai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://platform.openai.com/docs/models/sora-2"
@@ -43039,7 +43371,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/spark/color.svg"
+      "default": "/icons/spark/color.svg",
+      "color": "/icons/spark/color.svg",
+      "mono-lobe": "/icons/spark/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://xinghuo.xfyun.cn"
@@ -43481,7 +43815,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/stability-stablediffusion/color.svg"
+      "default": "/icons/stability-stablediffusion/color.svg",
+      "color": "/icons/stability-stablediffusion/color.svg",
+      "mono-lobe": "/icons/stability-stablediffusion/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://deepmind.google/technologies/gemini"
@@ -43794,7 +44130,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/statecloud/color.svg"
+      "default": "/icons/statecloud/color.svg",
+      "color": "/icons/statecloud/color.svg",
+      "mono-lobe": "/icons/statecloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ctyun.cn/act/xirang/deepseek"
@@ -44011,7 +44349,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/stepfun/color.svg"
+      "default": "/icons/stepfun/color.svg",
+      "color": "/icons/stepfun/color.svg",
+      "mono-lobe": "/icons/stepfun/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://stepfun.com"
@@ -44110,7 +44450,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/straico/color.svg"
+      "default": "/icons/straico/color.svg",
+      "color": "/icons/straico/color.svg",
+      "mono-lobe": "/icons/straico/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://straico.com"
@@ -44166,7 +44508,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/streamlake/color.svg"
+      "default": "/icons/streamlake/color.svg",
+      "color": "/icons/streamlake/color.svg",
+      "mono-lobe": "/icons/streamlake/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://streamlake.ai"
@@ -44370,7 +44714,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/submodel/color.svg"
+      "default": "/icons/submodel/color.svg",
+      "color": "/icons/submodel/color.svg",
+      "mono-lobe": "/icons/submodel/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://submodel.ai"
@@ -44932,7 +45278,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/sync/mono-lobe.svg"
+      "default": "/icons/sync/mono-lobe.svg",
+      "mono-lobe": "/icons/sync/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://sync.so"
@@ -45288,7 +45635,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/targon/color.svg"
+      "default": "/icons/targon/color.svg",
+      "color": "/icons/targon/color.svg",
+      "mono-lobe": "/icons/targon/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://targon.com"
@@ -45384,7 +45733,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/tavily/color.svg"
+      "default": "/icons/tavily/color.svg",
+      "color": "/icons/tavily/color.svg",
+      "mono-lobe": "/icons/tavily/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://tavily.com"
@@ -45477,7 +45828,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/technology-innovation-institute-falcon/color.svg"
+      "default": "/icons/technology-innovation-institute-falcon/color.svg",
+      "color": "/icons/technology-innovation-institute-falcon/color.svg",
+      "mono-lobe": "/icons/technology-innovation-institute-falcon/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://tii.ae"
@@ -45636,7 +45989,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/tencent/color.svg"
+      "default": "/icons/tencent/color.svg",
+      "color": "/icons/tencent/color.svg",
+      "mono-lobe": "/icons/tencent/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://tencent.com"
@@ -45650,7 +46005,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/tencentcloud/color.svg"
+      "default": "/icons/tencentcloud/color.svg",
+      "color": "/icons/tencentcloud/color.svg",
+      "mono-lobe": "/icons/tencentcloud/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cloud.tencent.com"
@@ -46325,7 +46682,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/tiangong/color.svg"
+      "default": "/icons/tiangong/color.svg",
+      "color": "/icons/tiangong/color.svg",
+      "mono-lobe": "/icons/tiangong/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://tiangong.cn"
@@ -46665,7 +47024,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/togetherdotai/color.svg"
+      "default": "/icons/togetherdotai/color.svg",
+      "color": "/icons/togetherdotai/color.svg",
+      "mono-lobe": "/icons/togetherdotai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://together.ai"
@@ -46815,7 +47176,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/topazlabs/mono-lobe.svg"
+      "default": "/icons/topazlabs/mono-lobe.svg",
+      "mono-lobe": "/icons/topazlabs/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://topazlabs.com"
@@ -47029,7 +47391,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/trae/color.svg"
+      "default": "/icons/trae/color.svg",
+      "color": "/icons/trae/color.svg",
+      "mono-lobe": "/icons/trae/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://trae.ai"
@@ -47383,7 +47747,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/tripo/color.svg"
+      "default": "/icons/tripo/color.svg",
+      "color": "/icons/tripo/color.svg",
+      "mono-lobe": "/icons/tripo/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://tripo3d.ai"
@@ -47706,7 +48072,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/turix/mono-lobe.svg"
+      "default": "/icons/turix/mono-lobe.svg",
+      "mono-lobe": "/icons/turix/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://turix.ai"
@@ -48146,7 +48513,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/udio/color.svg"
+      "default": "/icons/udio/color.svg",
+      "color": "/icons/udio/color.svg",
+      "mono-lobe": "/icons/udio/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://udio.com"
@@ -48550,7 +48919,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/unstructured/color.svg"
+      "default": "/icons/unstructured/color.svg",
+      "color": "/icons/unstructured/color.svg",
+      "mono-lobe": "/icons/unstructured/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://unstructured.io"
@@ -48659,7 +49030,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/upstage/color.svg"
+      "default": "/icons/upstage/color.svg",
+      "color": "/icons/upstage/color.svg",
+      "mono-lobe": "/icons/upstage/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://upstage.ai"
@@ -48831,7 +49204,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/v0-vercel/mono-lobe.svg"
+      "default": "/icons/v0-vercel/mono-lobe.svg",
+      "mono-lobe": "/icons/v0-vercel/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://v0.dev"
@@ -49060,7 +49434,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/vectorizerdotai/mono-lobe.svg"
+      "default": "/icons/vectorizerdotai/mono-lobe.svg",
+      "mono-lobe": "/icons/vectorizerdotai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://vectorizer.ai"
@@ -49268,7 +49643,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/vertexai-google/color.svg"
+      "default": "/icons/vertexai-google/color.svg",
+      "color": "/icons/vertexai-google/color.svg",
+      "mono-lobe": "/icons/vertexai-google/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://cloud.google.com/generative-ai-studio"
@@ -49419,7 +49796,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/vidu/color.svg"
+      "default": "/icons/vidu/color.svg",
+      "color": "/icons/vidu/color.svg",
+      "mono-lobe": "/icons/vidu/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://vidu.com"
@@ -49433,7 +49812,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/viggle/mono-lobe.svg"
+      "default": "/icons/viggle/mono-lobe.svg",
+      "mono-lobe": "/icons/viggle/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://viggle.ai"
@@ -49811,7 +50191,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/vllm/color.svg"
+      "default": "/icons/vllm/color.svg",
+      "color": "/icons/vllm/color.svg",
+      "mono-lobe": "/icons/vllm/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/vllm-project"
@@ -49920,7 +50302,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/volcengine/color.svg"
+      "default": "/icons/volcengine/color.svg",
+      "color": "/icons/volcengine/color.svg",
+      "mono-lobe": "/icons/volcengine/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://volcengine.com"
@@ -50028,7 +50412,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/voyage/color.svg"
+      "default": "/icons/voyage/color.svg",
+      "color": "/icons/voyage/color.svg",
+      "mono-lobe": "/icons/voyage/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://voyageai.com"
@@ -50883,7 +51269,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/wenxin/color.svg"
+      "default": "/icons/wenxin/color.svg",
+      "color": "/icons/wenxin/color.svg",
+      "mono-lobe": "/icons/wenxin/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://yiyan.baidu.com"
@@ -51477,7 +51865,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/workersai-cloudflare/color.svg"
+      "default": "/icons/workersai-cloudflare/color.svg",
+      "color": "/icons/workersai-cloudflare/color.svg",
+      "mono-lobe": "/icons/workersai-cloudflare/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://developers.cloudflare.com/workers-ai"
@@ -51701,7 +52091,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/xai/mono-lobe.svg"
+      "default": "/icons/xai/mono-lobe.svg",
+      "mono-lobe": "/icons/xai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://x.ai"
@@ -51865,7 +52256,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/xiaomi-mimo/mono-lobe.svg"
+      "default": "/icons/xiaomi-mimo/mono-lobe.svg",
+      "mono-lobe": "/icons/xiaomi-mimo/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://platform.xiaomimimo.com"
@@ -51879,7 +52271,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/xinference/color.svg"
+      "default": "/icons/xinference/color.svg",
+      "color": "/icons/xinference/color.svg",
+      "mono-lobe": "/icons/xinference/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/xorbitsai/inference"
@@ -51992,7 +52386,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/xuanyuan/color.svg"
+      "default": "/icons/xuanyuan/color.svg",
+      "color": "/icons/xuanyuan/color.svg",
+      "mono-lobe": "/icons/xuanyuan/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/Duxiaoman-DI/XuanYuan"
@@ -52126,7 +52522,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/yandex/mono-lobe.svg"
+      "default": "/icons/yandex/mono-lobe.svg",
+      "mono-lobe": "/icons/yandex/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://ai.yandex.com"
@@ -52224,7 +52621,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/yi/color.svg"
+      "default": "/icons/yi/color.svg",
+      "color": "/icons/yi/color.svg",
+      "mono-lobe": "/icons/yi/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://github.com/01-ai/Yi"
@@ -52292,7 +52691,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/youmind/mono-lobe.svg"
+      "default": "/icons/youmind/mono-lobe.svg",
+      "mono-lobe": "/icons/youmind/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://youmind.ai"
@@ -52423,7 +52823,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/yuanbao/color.svg"
+      "default": "/icons/yuanbao/color.svg",
+      "color": "/icons/yuanbao/color.svg",
+      "mono-lobe": "/icons/yuanbao/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://yuanbao.tencent.com"
@@ -52463,7 +52865,8 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/zdotai/mono-lobe.svg"
+      "default": "/icons/zdotai/mono-lobe.svg",
+      "mono-lobe": "/icons/zdotai/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://z.ai"
@@ -52723,7 +53126,9 @@
       "Software"
     ],
     "variants": {
-      "default": "/icons/zencoder/color.svg"
+      "default": "/icons/zencoder/color.svg",
+      "color": "/icons/zencoder/color.svg",
+      "mono-lobe": "/icons/zencoder/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://zencoder.ai"
@@ -52764,7 +53169,8 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/zenmux/mono-lobe.svg"
+      "default": "/icons/zenmux/mono-lobe.svg",
+      "mono-lobe": "/icons/zenmux/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://zenmux.ai"
@@ -52872,7 +53278,9 @@
       "AI"
     ],
     "variants": {
-      "default": "/icons/zhipu/color.svg"
+      "default": "/icons/zhipu/color.svg",
+      "color": "/icons/zhipu/color.svg",
+      "mono-lobe": "/icons/zhipu/mono-lobe.svg"
     },
     "license": "MIT",
     "url": "https://zhipuai.cn"

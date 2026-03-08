@@ -1,7 +1,7 @@
 {
-  "name": "@thesvg/icons",
+  "name": "@the-svg/icons",
   "version": "0.1.0",
-  "description": "Tree-shakeable SVG icon components and raw SVG strings from thesvg.org — 3,800+ brand icons",
+  "description": "Tree-shakeable SVG icon components and raw SVG strings from thesvg.org - 3,800+ brand icons",
   "type": "module",
   "sideEffects": false,
   "license": "MIT",
@@ -9,11 +9,11 @@
   "homepage": "https://thesvg.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thesvg/thesvg.git",
+    "url": "https://github.com/GLINCKER/thesvg.git",
     "directory": "packages/icons"
   },
   "bugs": {
-    "url": "https://github.com/thesvg/thesvg/issues"
+    "url": "https://github.com/GLINCKER/thesvg/issues"
   },
   "keywords": [
     "svg",
@@ -46,7 +46,9 @@
   ],
   "scripts": {
     "build": "tsx scripts/build-icons.ts",
-    "prepublishOnly": "npm run build"
+    "audit": "node scripts/security-audit.mjs",
+    "validate": "node scripts/validate-dist.mjs",
+    "prepublishOnly": "npm run build && npm run audit && npm run validate"
   },
   "devDependencies": {
     "tsx": "^4.21.0",

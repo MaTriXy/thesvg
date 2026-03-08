@@ -1,0 +1,43 @@
+{
+  "name": "@thesvg/cli",
+  "version": "0.1.0",
+  "description": "CLI tool to add SVG icons from thesvg.org to your project",
+  "type": "module",
+  "license": "MIT",
+  "author": "thesvg.org",
+  "homepage": "https://thesvg.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thesvg/thesvg.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/thesvg/thesvg/issues"
+  },
+  "keywords": [
+    "svg",
+    "icons",
+    "brand",
+    "cli",
+    "thesvg"
+  ],
+  "bin": {
+    "thesvg": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

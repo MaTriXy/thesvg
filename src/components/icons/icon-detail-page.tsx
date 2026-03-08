@@ -17,6 +17,7 @@ import {
   Image,
   Link2,
   Loader2,
+  Terminal,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,10 @@ import { formatSvg } from "@/lib/copy-formats";
 import { useFavoritesStore } from "@/lib/stores/favorites-store";
 import { cn } from "@/lib/utils";
 import { svgToPng, downloadPng } from "@/lib/svg-to-png";
+import {
+  generateSnippet,
+  type SnippetFormat,
+} from "@/lib/code-snippets";
 
 interface IconDetailPageProps {
   icon: IconEntry;
@@ -54,6 +59,14 @@ const FORMAT_BUTTONS: {
   { value: "data-uri", label: "URI", icon: <Globe className="h-3.5 w-3.5" /> },
 ];
 
+const SNIPPET_TABS: { value: SnippetFormat; label: string }[] = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "html", label: "HTML" },
+  { value: "nextjs", label: "Next.js" },
+  { value: "css", label: "CSS" },
+];
+
 const DEMO_SIZES = [16, 24, 32, 48, 64];
 const PNG_EXPORT_SIZES = [32, 64, 128, 256, 512];
 
@@ -69,6 +82,10 @@ export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps)
   const [copiedFormat, setCopiedFormat] = useState<string | null>(null);
   const [svgContent, setSvgContent] = useState("");
   const [showCode, setShowCode] = useState(false);
+  const [showSnippets, setShowSnippets] = useState(false);
+  const [activeSnippetFormat, setActiveSnippetFormat] =
+    useState<SnippetFormat>("react");
+  const [copiedSnippet, setCopiedSnippet] = useState(false);
   const [exportingSize, setExportingSize] = useState<number | null>(null);
   const [exportError, setExportError] = useState<string | null>(null);
 
@@ -115,6 +132,18 @@ export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps)
     setCopiedFormat("raw");
     setTimeout(() => setCopiedFormat(null), 1500);
   }, [svgContent]);
+
+  const activeSnippet = useMemo(
+    () =>
+      generateSnippet(icon.slug, icon.title, activeSnippetFormat, activeVariant),
+    [icon.slug, icon.title, activeSnippetFormat, activeVariant]
+  );
+
+  const handleCopySnippet = useCallback(async () => {
+    await navigator.clipboard.writeText(activeSnippet);
+    setCopiedSnippet(true);
+    setTimeout(() => setCopiedSnippet(false), 1500);
+  }, [activeSnippet]);
 
   const handleDownload = useCallback(async () => {
     if (!currentPath) return;
@@ -404,6 +433,72 @@ export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps)
             </div>
             {exportError && (
               <p className="mt-2 text-xs text-red-500">{exportError}</p>
+            )}
+          </div>
+
+          {/* Usage snippets (collapsible) */}
+          <div className="overflow-hidden rounded-xl border border-border">
+            <button
+              type="button"
+              onClick={() => setShowSnippets(!showSnippets)}
+              className="flex w-full items-center justify-between px-4 py-3 transition-colors hover:bg-muted/40"
+            >
+              <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                <Terminal className="h-3.5 w-3.5" />
+                Usage Snippets
+              </span>
+              {showSnippets ? (
+                <ChevronUp className="h-3.5 w-3.5 text-muted-foreground" />
+              ) : (
+                <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
+              )}
+            </button>
+            {showSnippets && (
+              <div className="border-t border-border">
+                {/* Format tabs */}
+                <div className="flex flex-wrap gap-1.5 px-4 pt-3 pb-2">
+                  {SNIPPET_TABS.map((tab) => (
+                    <button
+                      key={tab.value}
+                      type="button"
+                      onClick={() => setActiveSnippetFormat(tab.value)}
+                      className={cn(
+                        "rounded-md px-2.5 py-1 text-[11px] font-medium transition-colors",
+                        activeSnippetFormat === tab.value
+                          ? "bg-foreground text-background"
+                          : "bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                      )}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+                {/* Code block */}
+                <div className="relative px-4 pb-4">
+                  <button
+                    type="button"
+                    onClick={handleCopySnippet}
+                    className={cn(
+                      "absolute top-2 right-7 z-10 flex items-center gap-1 rounded-md px-2 py-1 text-[10px] font-medium transition-colors",
+                      copiedSnippet
+                        ? "bg-green-500/10 text-green-600 dark:text-green-400"
+                        : "bg-background/80 text-muted-foreground backdrop-blur-sm hover:bg-accent hover:text-accent-foreground"
+                    )}
+                  >
+                    {copiedSnippet ? (
+                      <Check className="h-3 w-3" />
+                    ) : (
+                      <Copy className="h-3 w-3" />
+                    )}
+                    {copiedSnippet ? "Copied" : "Copy"}
+                  </button>
+                  <div className="overflow-hidden rounded-lg border border-border/40 bg-muted/30">
+                    <pre className="max-h-64 overflow-auto p-4 pr-16 font-mono text-[10px] leading-5 text-foreground/80">
+                      <code className="block whitespace-pre">{activeSnippet}</code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
             )}
           </div>
 

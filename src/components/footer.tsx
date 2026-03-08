@@ -10,7 +10,7 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <Link href="/" className="font-semibold text-foreground">
-                thesvg
+                theSVG
               </Link>
               <span className="hidden text-border sm:inline">|</span>
               <span className="hidden sm:inline">The Open SVG Brand Library</span>

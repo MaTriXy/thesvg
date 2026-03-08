@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <title>Luma</title>
+  <path d="M2 5.999L12.392 0v24L2 18V5.999z" fill="#000" />
+  <path d="M12.392 24L2 18l10.392-6 10.393 6-10.393 6z" fill={a.fill} />
+  <path d="M12.392 24L2 18l10.392-6 10.393 6-10.393 6z" fill={b.fill} />
+  <path d="M2 5.999L12.392 0v24L2 18V5.999z"
+        fill={c.fill}
+        style={{
+          mixBlendMode: 'screen',
+        }} />
+  <path d="M12.392 24L2 18l10.392-6 10.393 6-10.393 6z"
+        fill={d.fill}
+        style={{
+          mixBlendMode: 'overlay',
+        }} />
+  <path d="M2 5.999L12.392 0v24L2 18V5.999z"
+        fill={e.fill}
+        style={{
+          mixBlendMode: 'overlay',
+        }} />
+</svg>

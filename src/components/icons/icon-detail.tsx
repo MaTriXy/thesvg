@@ -15,6 +15,7 @@ import {
   Image,
   Link2,
   Loader2,
+  Terminal,
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +25,10 @@ import { formatSvg } from "@/lib/copy-formats";
 import { useFavoritesStore } from "@/lib/stores/favorites-store";
 import { cn } from "@/lib/utils";
 import { svgToPng, downloadPng } from "@/lib/svg-to-png";
+import {
+  generateSnippet,
+  type SnippetFormat,
+} from "@/lib/code-snippets";
 
 interface IconDetailProps {
   icon: IconEntry | null;
@@ -64,6 +69,14 @@ const FORMAT_BUTTONS: {
   },
 ];
 
+const SNIPPET_TABS: { value: SnippetFormat; label: string }[] = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "html", label: "HTML" },
+  { value: "nextjs", label: "Next.js" },
+  { value: "css", label: "CSS" },
+];
+
 const DEMO_SIZES = [16, 24, 32, 48, 64];
 const PNG_EXPORT_SIZES = [32, 64, 128, 256, 512];
 
@@ -80,6 +93,10 @@ export function IconDetail({ icon, onClose }: IconDetailProps) {
   const [copiedFormat, setCopiedFormat] = useState<string | null>(null);
   const [svgContent, setSvgContent] = useState<string>("");
   const [showCode, setShowCode] = useState(false);
+  const [showSnippets, setShowSnippets] = useState(false);
+  const [activeSnippetFormat, setActiveSnippetFormat] =
+    useState<SnippetFormat>("react");
+  const [copiedSnippet, setCopiedSnippet] = useState(false);
   const [exportingSize, setExportingSize] = useState<number | null>(null);
   const [exportError, setExportError] = useState<string | null>(null);
   const toggleFavorite = useFavoritesStore((s) => s.toggleFavorite);
@@ -114,6 +131,8 @@ export function IconDetail({ icon, onClose }: IconDetailProps) {
   useEffect(() => {
     setActiveVariant("default");
     setShowCode(false);
+    setShowSnippets(false);
+    setActiveSnippetFormat("react");
   }, [icon?.slug]);
 
   const handleCopy = useCallback(
@@ -135,6 +154,26 @@ export function IconDetail({ icon, onClose }: IconDetailProps) {
     setCopiedFormat("raw");
     setTimeout(() => setCopiedFormat(null), 1500);
   }, [svgContent]);
+
+  const activeSnippet = useMemo(
+    () =>
+      icon
+        ? generateSnippet(
+            icon.slug,
+            icon.title,
+            activeSnippetFormat,
+            activeVariant
+          )
+        : "",
+    [icon, activeSnippetFormat, activeVariant]
+  );
+
+  const handleCopySnippet = useCallback(async () => {
+    if (!activeSnippet) return;
+    await navigator.clipboard.writeText(activeSnippet);
+    setCopiedSnippet(true);
+    setTimeout(() => setCopiedSnippet(false), 1500);
+  }, [activeSnippet]);
 
   const handleDownload = useCallback(async () => {
     if (!icon) return;
@@ -410,6 +449,76 @@ export function IconDetail({ icon, onClose }: IconDetailProps) {
           </div>
           {exportError && (
             <p className="mt-1.5 text-[10px] text-red-500">{exportError}</p>
+          )}
+        </div>
+
+        {/* Usage snippets (collapsible) */}
+        <div className="border-t border-border/30">
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={() => setShowSnippets(!showSnippets)}
+            onKeyDown={(e) => e.key === "Enter" && setShowSnippets(!showSnippets)}
+            className="flex w-full cursor-pointer items-center justify-between px-4 py-3 transition-colors hover:bg-muted/30"
+          >
+            <span className="flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+              <Terminal className="h-3 w-3" />
+              Usage Snippets
+            </span>
+            {showSnippets ? (
+              <ChevronUp className="h-3.5 w-3.5 text-muted-foreground" />
+            ) : (
+              <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
+            )}
+          </div>
+          {showSnippets && (
+            <div className="px-4 pb-4">
+              {/* Format tabs */}
+              <div className="mb-2 flex flex-wrap gap-1">
+                {SNIPPET_TABS.map((tab) => (
+                  <button
+                    key={tab.value}
+                    type="button"
+                    onClick={() => setActiveSnippetFormat(tab.value)}
+                    className={cn(
+                      "rounded-md px-2 py-0.5 text-[11px] font-medium transition-colors",
+                      activeSnippetFormat === tab.value
+                        ? "bg-foreground text-background"
+                        : "bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    )}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+              {/* Code block */}
+              <div className="relative">
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={handleCopySnippet}
+                  onKeyDown={(e) => e.key === "Enter" && handleCopySnippet()}
+                  className={cn(
+                    "absolute top-1.5 right-2 z-10 flex cursor-pointer items-center gap-1 rounded-md px-2 py-1 text-[10px] font-medium transition-colors",
+                    copiedSnippet
+                      ? "bg-green-500/10 text-green-600 dark:text-green-400"
+                      : "bg-background/80 text-muted-foreground backdrop-blur-sm hover:bg-accent hover:text-accent-foreground"
+                  )}
+                >
+                  {copiedSnippet ? (
+                    <Check className="h-3 w-3" />
+                  ) : (
+                    <Copy className="h-3 w-3" />
+                  )}
+                  {copiedSnippet ? "Copied" : "Copy"}
+                </div>
+                <div className="overflow-hidden rounded-lg border border-border/40 bg-muted/40">
+                  <pre className="max-h-40 overflow-x-auto overflow-y-auto p-3 pr-14 font-mono text-[10px] leading-5 text-foreground/80">
+                    <code className="block whitespace-pre">{activeSnippet}</code>
+                  </pre>
+                </div>
+              </div>
+            </div>
           )}
         </div>
 

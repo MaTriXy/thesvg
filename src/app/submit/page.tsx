@@ -1,13 +1,17 @@
-import { ArrowLeft, GitBranch, Upload, CheckCircle, FileCode } from "lucide-react";
+import { ArrowLeft, CheckCircle, FileCode, GitBranch, Upload } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAllCategories } from "@/lib/icons";
+import { SubmitForm } from "@/components/submit/submit-form";
 
 export const metadata: Metadata = {
-  title: "Submit an Icon - thesvg",
-  description: "Every brand deserves a place. Submit your brand SVG to thesvg.",
+  title: "Submit an Icon - theSVG",
+  description: "Every brand deserves a place. Submit your brand SVG to theSVG.",
 };
 
 export default function SubmitPage() {
+  const categories = getAllCategories();
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
       <Link
@@ -23,7 +27,7 @@ export default function SubmitPage() {
         Every brand deserves a place. No gatekeeping.
       </p>
 
-      <div className="space-y-8">
+      <div className="space-y-10">
         {/* Steps */}
         <div className="grid gap-6 sm:grid-cols-2">
           <Step
@@ -52,7 +56,7 @@ export default function SubmitPage() {
           />
         </div>
 
-        {/* Requirements */}
+        {/* SVG Requirements */}
         <div className="rounded-xl border border-border bg-card p-6">
           <h2 className="mb-4 text-lg font-semibold">SVG Requirements</h2>
           <ul className="space-y-2 text-sm text-muted-foreground">
@@ -62,7 +66,7 @@ export default function SubmitPage() {
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
-              Under 10KB file size
+              Under 50KB file size
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
@@ -70,7 +74,7 @@ export default function SubmitPage() {
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
-              Viewbox attribute present
+              viewBox attribute present
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
@@ -83,7 +87,7 @@ export default function SubmitPage() {
           </ul>
         </div>
 
-        {/* Schema */}
+        {/* Icon Entry Schema */}
         <div className="rounded-xl border border-border bg-card p-6">
           <h2 className="mb-4 text-lg font-semibold">Icon Entry Schema</h2>
           <pre className="overflow-auto rounded-lg bg-muted/50 p-4 text-xs">
@@ -102,6 +106,18 @@ export default function SubmitPage() {
   "url": "https://yourbrand.com"
 }`}</code>
           </pre>
+        </div>
+
+        {/* Interactive Submission Form */}
+        <div className="rounded-xl border border-border bg-card p-6">
+          <div className="mb-6">
+            <h2 className="mb-1 text-lg font-semibold">Quick Submit</h2>
+            <p className="text-sm text-muted-foreground">
+              Drop your SVG below to validate it and generate a pre-filled GitHub issue -
+              no local setup required.
+            </p>
+          </div>
+          <SubmitForm availableCategories={categories} />
         </div>
       </div>
     </div>

@@ -14,9 +14,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Extensions & Integrations - thesvg",
+  title: "Extensions & Integrations - theSVG",
   description:
-    "Use thesvg icons everywhere. Editor extensions, design tool plugins, npm packages, CLI tools, MCP server, and framework components for React, Vue, Svelte, and more.",
+    "Use theSVG icons everywhere. Editor extensions, design tool plugins, npm packages, CLI tools, MCP server, and framework components for React, Vue, Svelte, and more.",
 };
 
 type Status = "available" | "coming-soon" | "community";
@@ -214,7 +214,7 @@ const STATUS_CONFIG: Record<
   "coming-soon": {
     label: "Coming Soon",
     classes:
-      "bg-amber-500/10 text-amber-600 dark:text-amber-400 ring-1 ring-amber-500/20",
+      "bg-orange-500/10 text-orange-600 dark:text-orange-400 ring-1 ring-orange-500/20",
   },
   community: {
     label: "Community",
@@ -319,10 +319,10 @@ export default function ExtensionsPage() {
           </div>
           <div className="flex-1">
             <h2 className="mb-2 text-xl font-semibold">
-              Want to build an extension for thesvg?
+              Want to build an extension for theSVG?
             </h2>
             <p className="mb-4 text-sm text-muted-foreground">
-              The thesvg API and CDN are fully open. No auth required for reads. Build a plugin,
+              The theSVG API and CDN are fully open. No auth required for reads. Build a plugin,
               extension, or workflow using the endpoints below - then open a PR to add it to this
               page.
             </p>

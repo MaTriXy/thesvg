@@ -12,8 +12,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "thesvg - The Open SVG Brand Library",
-    template: "%s | thesvg",
+    default: "theSVG - The Open SVG Brand Library",
+    template: "%s | theSVG",
   },
   description:
     "4,600+ brand SVGs in one place. Search, preview, copy. Free, open-source, community-driven. No gatekeeping - every brand deserves a place.",
@@ -33,19 +33,23 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://thesvg.org"),
   openGraph: {
-    title: "thesvg - The Open SVG Brand Library",
+    title: "theSVG - The Open SVG Brand Library",
     description:
       "4,600+ brand SVGs in one place. Search, preview, copy. Free, open-source, community-driven.",
     url: "https://thesvg.org",
-    siteName: "thesvg",
+    siteName: "theSVG",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "thesvg - The Open SVG Brand Library",
+    title: "theSVG - The Open SVG Brand Library",
     description:
       "4,600+ brand SVGs in one place. Search, preview, copy. Free, open-source, community-driven.",
+  },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/apple-touch-icon.png",
   },
   robots: {
     index: true,

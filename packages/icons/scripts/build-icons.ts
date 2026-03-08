@@ -121,8 +121,9 @@ function serializeRecord(record: Record<string, string>): string {
 
 function generateEsm(icon: RawIcon, allVariants: Record<string, string>): string {
   const primary = primarySvg(icon.slug, icon.variants);
+  const safe = toSafeIdentifier(icon.slug);
   return [
-    `// @thesvg/icons — ${icon.title}`,
+    `// @thesvg/icons - ${icon.title}`,
     `// Auto-generated. Do not edit.`,
     ``,
     `export const slug = ${JSON.stringify(icon.slug)};`,
@@ -135,8 +136,8 @@ function generateEsm(icon: RawIcon, allVariants: Record<string, string>): string
     `export const license = ${JSON.stringify(icon.license ?? "")};`,
     `export const url = ${JSON.stringify(icon.url ?? "")};`,
     ``,
-    `const ${icon.slug} = { slug, title, hex, categories, aliases, svg, variants, license, url };`,
-    `export default ${icon.slug};`,
+    `const ${safe} = { slug, title, hex, categories, aliases, svg, variants, license, url };`,
+    `export default ${safe};`,
   ].join("\n");
 }
 
@@ -144,7 +145,7 @@ function generateCjs(icon: RawIcon, allVariants: Record<string, string>): string
   const primary = primarySvg(icon.slug, icon.variants);
   return [
     `"use strict";`,
-    `// @thesvg/icons — ${icon.title}`,
+    `// @thesvg/icons -${icon.title}`,
     `// Auto-generated. Do not edit.`,
     ``,
     `Object.defineProperty(exports, "__esModule", { value: true });`,
@@ -174,8 +175,9 @@ function generateCjs(icon: RawIcon, allVariants: Record<string, string>): string
 }
 
 function generateDts(icon: RawIcon): string {
+  const safe = toSafeIdentifier(icon.slug);
   return [
-    `// @thesvg/icons — ${icon.title}`,
+    `// @thesvg/icons - ${icon.title}`,
     `// Auto-generated. Do not edit.`,
     ``,
     `import type { IconModule } from "./index.js";`,
@@ -190,8 +192,8 @@ function generateDts(icon: RawIcon): string {
     `export declare const license: string;`,
     `export declare const url: string;`,
     ``,
-    `declare const ${icon.slug}: IconModule;`,
-    `export default ${icon.slug};`,
+    `declare const ${safe}: IconModule;`,
+    `export default ${safe};`,
   ].join("\n");
 }
 
@@ -250,7 +252,7 @@ function generateDtsBarrel(slugs: string[]): string {
 /** Copy the types.ts source as a types.d.ts declaration for the barrel. */
 function generateTypesDeclaration(): string {
   return [
-    `// @thesvg/icons — shared types`,
+    `// @thesvg/icons -shared types`,
     `// Auto-generated. Do not edit.`,
     ``,
     `export type IconVariants = Record<string, string>;`,
@@ -297,12 +299,20 @@ function main(): void {
   mkdirSync(DIST, { recursive: true });
 
   const processedSlugs: string[] = [];
+  let skipped = 0;
 
   for (const icon of rawIcons) {
     const allVariants: Record<string, string> = {};
     for (const variantKey of Object.keys(icon.variants)) {
       const content = readSvg(icon.slug, variantKey);
       if (content) allVariants[variantKey] = content;
+    }
+
+    // Skip icons with no SVG data - don't ship empty modules
+    const primary = primarySvg(icon.slug, icon.variants);
+    if (!primary) {
+      skipped++;
+      continue;
     }
 
     // Write ESM module
@@ -319,16 +329,20 @@ function main(): void {
     }
   }
 
+  if (skipped > 0) {
+    console.log(`  Skipped ${skipped} icons with no SVG data.`);
+  }
+
   // Shared types declaration
   writeFileSync(join(DIST, "types.d.ts"), generateTypesDeclaration() + "\n");
   // A minimal types.js so the ESM barrel can import from it at runtime if needed
   writeFileSync(
     join(DIST, "types.js"),
-    `// @thesvg/icons — shared types (runtime stub, types are declaration-only)\nexport {};\n`,
+    `// @thesvg/icons -shared types (runtime stub, types are declaration-only)\nexport {};\n`,
   );
   writeFileSync(
     join(DIST, "types.cjs"),
-    `"use strict";\n// @thesvg/icons — shared types (runtime stub)\nObject.defineProperty(exports, "__esModule", { value: true });\n`,
+    `"use strict";\n// @thesvg/icons -shared types (runtime stub)\nObject.defineProperty(exports, "__esModule", { value: true });\n`,
   );
 
   // Barrel files
