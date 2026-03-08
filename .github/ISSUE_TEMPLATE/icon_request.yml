@@ -1,0 +1,88 @@
+name: Icon Request
+description: Request a new brand icon to be added
+labels: ["icon-request"]
+title: "Icon request: "
+
+body:
+  - type: input
+    id: brand_name
+    attributes:
+      label: Brand Name
+      description: Official name of the brand
+      placeholder: e.g. Acme Corp
+    validations:
+      required: true
+
+  - type: input
+    id: brand_url
+    attributes:
+      label: Brand Website
+      description: Official website URL
+      placeholder: https://example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: svg_source
+    attributes:
+      label: SVG Source
+      description: |
+        Where can we find the official SVG? Link to a brand assets page,
+        press kit, or GitHub repo. If you have the SVG file, paste the
+        content here.
+      placeholder: |
+        Brand assets page: https://example.com/brand
+        Or paste SVG content here...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Primary category for this icon
+      options:
+        - AI
+        - Analytics
+        - Auth
+        - Browser
+        - CMS
+        - Cloud
+        - Communication
+        - Crypto
+        - Database
+        - Design
+        - DevTool
+        - E-commerce
+        - Education
+        - Entertainment
+        - Finance
+        - Framework
+        - Gaming
+        - Hardware
+        - Hosting
+        - Language
+        - Library
+        - Messaging
+        - Music
+        - OS
+        - Other
+        - Productivity
+        - Security
+        - Social
+        - Storage
+        - VCS
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing icons and this brand is not already included
+          required: true
+        - label: This is an official brand logo (not a fan-made or modified version)
+          required: true
+        - label: The SVG is under 50KB
+          required: false

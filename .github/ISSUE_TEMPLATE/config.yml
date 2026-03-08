@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Submit an Icon
+    url: https://thesvg.org/submit
+    about: Submit a new brand icon directly on the website
+  - name: Browse Icons
+    url: https://thesvg.org
+    about: Search all 3,800+ icons
+  - name: Discussions
+    url: https://github.com/GLINCKER/thesvg/discussions
+    about: Ask questions and share ideas

@@ -1,0 +1,49 @@
+name: Icon Update
+description: Report an outdated, incorrect, or broken icon
+labels: ["icon-update"]
+title: "Icon update: "
+
+body:
+  - type: input
+    id: icon_slug
+    attributes:
+      label: Icon Slug
+      description: The slug of the icon (as shown in the URL on thesvg.org)
+      placeholder: e.g. github
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: What needs updating?
+      options:
+        - Logo is outdated (brand has a new logo)
+        - Logo is incorrect (wrong colors, shape, etc.)
+        - SVG doesn't render correctly
+        - Wrong brand name or metadata
+        - Wrong category
+        - Missing variant (light, dark, mono, wordmark)
+        - Brand color (hex) is wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe what needs to change. Include links to the correct version if possible.
+      placeholder: |
+        The brand updated their logo in January 2026.
+        New logo: https://example.com/brand-assets
+    validations:
+      required: true
+
+  - type: textarea
+    id: svg_content
+    attributes:
+      label: Updated SVG (if available)
+      description: Paste the corrected SVG content or link to it
+      render: xml
+    validations:
+      required: false

@@ -1,0 +1,37 @@
+name: Icon Removal Request
+description: Request removal of a brand icon (brand owners only)
+labels: ["icon-removal", "priority"]
+title: "Removal request: "
+
+body:
+  - type: input
+    id: icon_slug
+    attributes:
+      label: Icon Slug
+      description: The slug of the icon to be removed
+      placeholder: e.g. acme-corp
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Removal
+      description: Please explain why the icon should be removed
+    validations:
+      required: true
+
+  - type: input
+    id: affiliation
+    attributes:
+      label: Your Affiliation
+      description: Your role or relationship to the brand
+      placeholder: e.g. Legal team at Acme Corp
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** We take removal requests seriously and will process them promptly.
+        For urgent requests, email hello@thesvg.org.

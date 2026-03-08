@@ -1,0 +1,66 @@
+name: Bug Report
+description: Report a bug in the npm package, website, or build tools
+labels: ["bug"]
+title: "Bug: "
+
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project is affected?
+      options:
+        - "@the-svg/icons (npm package)"
+        - "thesvg (npm wrapper package)"
+        - "thesvg.org (website)"
+        - "Build scripts"
+        - "CLI"
+        - "Other"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Package Version
+      description: Run `npm list @the-svg/icons` or `npm list thesvg`
+      placeholder: e.g. 0.1.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of the bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal steps to reproduce the behavior
+      placeholder: |
+        1. Install `npm install @the-svg/icons`
+        2. Import `import github from "@the-svg/icons/github"`
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Node version, OS, bundler
+      placeholder: "Node 20, macOS, Vite 5"
+    validations:
+      required: false
