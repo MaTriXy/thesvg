@@ -19,9 +19,10 @@ interface HomeContentProps {
   icons: IconEntry[];
   categoryCounts: { name: string; count: number }[];
   count: number;
+  recentIcons: IconEntry[];
 }
 
-export function HomeContent({ icons, categoryCounts, count }: HomeContentProps) {
+export function HomeContent({ icons, categoryCounts, count, recentIcons }: HomeContentProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const sidebarOpen = useSidebarStore((s) => s.open);
@@ -177,6 +178,7 @@ export function HomeContent({ icons, categoryCounts, count }: HomeContentProps) 
               icons={icons}
               categoryCounts={categoryCounts}
               count={count}
+              recentIcons={recentIcons}
               onSelectIcon={() => {}}
               onCategorySelect={(cat) => updateUrl({ category: cat })}
             />

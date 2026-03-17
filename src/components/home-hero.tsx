@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowRight, Package, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, Clock, Package, Sparkles, Zap } from "lucide-react";
 import Link from "next/link";
 import type { IconEntry } from "@/lib/icons";
 import { IconCard } from "@/components/icons/icon-card";
@@ -62,6 +62,7 @@ interface HomeHeroProps {
   icons: IconEntry[];
   categoryCounts: { name: string; count: number }[];
   count: number;
+  recentIcons: IconEntry[];
   onSelectIcon: (icon: IconEntry) => void;
   onCategorySelect: (category: string) => void;
 }
@@ -70,6 +71,7 @@ export function HomeHero({
   icons,
   categoryCounts,
   count,
+  recentIcons,
   onCategorySelect,
 }: HomeHeroProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -243,6 +245,22 @@ export function HomeHero({
           ))}
         </div>
       </section>
+
+      {/* Recently Added */}
+      {recentIcons.length > 0 && (
+        <section>
+          <div className="mb-4 flex items-center gap-2">
+            <Clock className="h-3.5 w-3.5 text-muted-foreground" />
+            <h2 className="text-sm font-semibold text-foreground">Recently Added</h2>
+            <div className="h-px flex-1 bg-border/40 dark:bg-white/[0.04]" />
+          </div>
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 lg:grid-cols-6">
+            {recentIcons.map((icon) => (
+              <IconCard key={icon.slug} icon={icon} onSelect={handleSelectIcon} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Browse by category */}
       <section>

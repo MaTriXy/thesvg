@@ -11,13 +11,18 @@ export interface IconEntry {
     light?: string;
     dark?: string;
     mono?: string;
+    color?: string;
     wordmark?: string;
     wordmarkLight?: string;
     wordmarkDark?: string;
+    lockup?: string;
+    lockupDark?: string;
+    [key: string]: string | undefined;
   };
   license: string;
   url?: string;
   guidelines?: string;
+  dateAdded?: string;
 }
 
 const icons = iconsData as IconEntry[];
@@ -64,6 +69,13 @@ export function getIconCount(): number {
 
 export function getFormattedIconCount(): string {
   return icons.length.toLocaleString("en-US");
+}
+
+export function getRecentlyAddedIcons(limit = 12): IconEntry[] {
+  return [...icons]
+    .filter((i) => i.dateAdded)
+    .sort((a, b) => (b.dateAdded as string).localeCompare(a.dateAdded as string))
+    .slice(0, limit);
 }
 
 export function getVariantCount(): number {
