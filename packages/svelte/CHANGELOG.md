@@ -1,5 +1,11 @@
 # @thesvg/svelte
 
+## 1.0.8
+
+### Patch Changes
+
+- Merge pull request [#44](https://github.com/glincker/thesvg/issues/44) from glincker/feat/recently-added-icons
+
 ## 1.0.7
 
 ### Patch Changes
