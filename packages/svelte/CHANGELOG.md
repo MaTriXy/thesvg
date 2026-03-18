@@ -1,5 +1,19 @@
 # @thesvg/svelte
 
+## 2.0.0
+
+### Major Changes
+
+- [#52](https://github.com/glincker/thesvg/pull/52) [`108e9c3`](https://github.com/glincker/thesvg/commit/108e9c3dbe71899b423e4fdd54df47d12c49f2b8) Thanks [@thegdsks](https://github.com/thegdsks)! - v2.0.0 - AWS Architecture Icons, Amazon family brands, SEO improvements
+
+  - Added 739 AWS architecture icons (services, resources, categories, groups)
+  - Added Amazon family brand icons (Amazon, Prime, Kindle, Fire TV, Music, Whole Foods Market)
+  - Total icon count now 4,758 with 10,000+ SVG variants
+  - Enhanced sitemap with image URLs for Google Image indexing
+  - Added JSON-LD structured data (WebPage, BreadcrumbList) for icon pages
+  - Professional footer redesign with glassmorphism, animated counters, partner logos
+  - New "collections" system (brands, aws) for icon organization
+
 ## 1.0.12
 
 ### Patch Changes
