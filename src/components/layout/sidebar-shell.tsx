@@ -30,7 +30,7 @@ export function SidebarShell({ children, categoryCounts, collections = [] }: Sid
 
   function handleCollectionSelect(collection: Collection | null) {
     if (collection) {
-      router.push(`/?collection=${encodeURIComponent(collection)}`);
+      router.push(`/collection/${encodeURIComponent(collection)}`);
     } else {
       router.push("/");
     }

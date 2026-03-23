@@ -9,14 +9,14 @@
 </p>
 
 <p align="center">
-  <strong>4,700+ SVG icons. Brands, AWS Architecture, and more. Search, copy, ship.</strong>
+  <strong>5,600+ SVG icons. Brands, AWS, Azure, GCP, and more. Search, copy, ship.</strong>
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/thesvg"><img src="https://img.shields.io/npm/v/thesvg?style=flat-square&color=F97316&label=npm" alt="npm" /></a>
   <a href="https://www.npmjs.com/package/thesvg"><img src="https://img.shields.io/npm/dm/thesvg?style=flat-square&color=F97316&label=downloads" alt="downloads" /></a>
   <a href="https://github.com/glincker/thesvg/stargazers"><img src="https://img.shields.io/github/stars/glincker/thesvg?style=flat-square&label=stars" alt="stars" /></a>
-  <a href="https://github.com/glincker/thesvg"><img src="https://img.shields.io/badge/icons-4%2C752-F97316?style=flat-square" alt="4,752 icons" /></a>
+  <a href="https://github.com/glincker/thesvg"><img src="https://img.shields.io/badge/icons-5%2C600%2B-F97316?style=flat-square" alt="5,600+ icons" /></a>
   <a href="https://github.com/glincker/thesvg/blob/main/LICENSE"><img src="https://img.shields.io/github/license/glincker/thesvg?style=flat-square" alt="license" /></a>
 </p>
 
@@ -34,7 +34,7 @@
 
 <p align="center">
   <a href="https://thesvg.org">
-    <img src="https://raw.githubusercontent.com/glincker/thesvg/main/public/og-image.png" alt="theSVG - 4,000+ brand SVG icons" width="720" />
+    <img src="https://raw.githubusercontent.com/glincker/thesvg/main/public/og-image.png" alt="theSVG - 5,600+ SVG icons for developers" width="720" />
   </a>
 </p>
 
@@ -44,9 +44,11 @@
 
 Most icon libraries focus on UI icons. Brand logos are scattered across press kits, Figma files, and random GitHub repos. **theSVG** is the single source for SVG icons - brand logos, cloud architecture diagrams, and more. Searchable, versioned, and available as npm packages, CDN, CLI, API, and MCP server.
 
-- **4,700+ icons** across multiple collections
-- **4,000+ brand icons** across 55+ categories
-- **739 AWS Architecture icons** - services, resources, categories, and groups (2026-Q1)
+- **5,600+ icons** across multiple collections
+- **4,019 brand icons** across 55+ categories
+- **739 AWS Architecture icons** (2026-Q1)
+- **626 Azure Service icons** (2026-Q1)
+- **214 Google Cloud icons** (2026-Q1)
 - **8,400+ SVG variants** - color, mono, light, dark, wordmark
 - **Tree-shakeable** - import one icon, ship only that icon
 - **TypeScript-first** - fully typed, dual ESM/CJS
@@ -59,14 +61,14 @@ theSVG organizes icons into collections:
 
 | Collection | Icons | Description |
 |------------|-------|-------------|
-| **Brand Icons** | 4,013 | Brand logos from 55+ categories |
+| **Brand Icons** | 4,019 | Brand logos from 55+ categories |
 | **AWS Architecture** | 739 | Official AWS service, resource, category, and group icons (2026-Q1) |
-| GCP *(coming soon)* | -- | Google Cloud Platform icons |
-| Azure *(coming soon)* | -- | Microsoft Azure icons |
+| **Azure Services** | 626 | Microsoft Azure service icons (2026-Q1) |
+| **Google Cloud** | 214 | Google Cloud Platform icons (2026-Q1) |
 
 ### AWS Architecture Icons
 
-Browse all AWS service and resource icons at [thesvg.org/?collection=aws](https://thesvg.org/?collection=aws). Icons are sourced from the official [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) package and distributed unmodified under [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/). Updated quarterly.
+Browse all AWS service and resource icons at [thesvg.org/collection/aws](https://thesvg.org/collection/aws). Icons are sourced from the official [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/) package and distributed unmodified under [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/). Updated quarterly.
 
 ## Install
 

@@ -28,12 +28,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const categoryList = icon.categories.join(", ");
   const cdnImage = `${CDN_BASE}/${slug}/default.svg`;
 
+  const collectionText =
+    icon.collection === "aws"
+      ? " Part of the AWS Architecture icon collection."
+      : icon.collection === "azure"
+        ? " Part of the Azure Services icon collection."
+        : icon.collection === "gcp"
+          ? " Part of the Google Cloud icon collection."
+          : "";
+
   const description =
     `Download the official ${icon.title} SVG icon for free. ` +
     `${variantCount} variant${variantCount !== 1 ? "s" : ""} (${variantNames.join(", ")})` +
     (categoryList ? ` in ${categoryList}` : "") +
     ". Copy as SVG, JSX, Vue, CDN link, or Data URI. Export PNG at 32-512px. " +
-    `Use the ${icon.title} logo in React, Vue, or via jsDelivr CDN. Open-source brand icon library.`;
+    `Use the ${icon.title} logo in React, Vue, or via jsDelivr CDN. Open-source brand icon library.` +
+    collectionText;
 
   const title = `${icon.title} SVG Icon - Free Download | Official Logo SVG | theSVG`;
 
@@ -65,6 +75,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: `https://thesvg.org/icon/${slug}`,
       type: "website",
+      siteName: "theSVG",
       images: [
         {
           url: cdnImage,

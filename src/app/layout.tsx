@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { getFormattedIconCount } from "@/lib/icons";
 import "./globals.css";
 
@@ -68,16 +69,25 @@ export const metadata: Metadata = {
     description: `Search, copy, and ship ${count}+ brand SVG icons. Free, open-source library with npm packages, React components, CLI, CDN, and MCP server for AI assistants.`,
     images: ["/og-image.png"],
   },
+  manifest: "/manifest.json",
   icons: {
     icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
   },
+  category: "technology",
+  creator: "GLINCKER",
+  publisher: "theSVG",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
+    },
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": "https://thesvg.org/feed.xml",
     },
   },
 };
@@ -90,6 +100,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="search" type="application/opensearchdescription+xml" title="theSVG" href="/opensearch.xml" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1VSDVTDKDR"
           strategy="afterInteractive"
@@ -110,6 +121,7 @@ export default function RootLayout({
           storageKey="thesvg-theme"
           disableTransitionOnChange
         >
+          <ScrollToTop />
           <Suspense>
             <Header />
           </Suspense>

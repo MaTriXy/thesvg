@@ -8,6 +8,8 @@ import { searchIcons } from "@/lib/search";
 import { Sidebar } from "@/components/layout/sidebar";
 import { IconGrid } from "@/components/icons/icon-grid";
 import { HomeHero } from "@/components/home-hero";
+import { OnboardingHint } from "@/components/onboarding-hint";
+import { HelpFab } from "@/components/help-fab";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { useFavoritesStore } from "@/lib/stores/favorites-store";
 import { useSidebarStore } from "@/lib/stores/sidebar-store";
@@ -21,11 +23,13 @@ interface HomeContentProps {
   count: number;
   recentIcons: IconEntry[];
   collections: { name: Collection; count: number }[];
+  defaultCollection?: Collection;
 }
 
-export function HomeContent({ icons, categoryCounts, count, recentIcons, collections }: HomeContentProps) {
+export function HomeContent({ icons, categoryCounts, count, recentIcons, collections, defaultCollection }: HomeContentProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+
   const sidebarOpen = useSidebarStore((s) => s.open);
   const setSidebarOpen = useSidebarStore((s) => s.setOpen);
   const favorites = useFavoritesStore((s) => s.favorites);
@@ -38,11 +42,13 @@ export function HomeContent({ icons, categoryCounts, count, recentIcons, collect
   const sortParam = searchParams.get("sort");
   const viewParam = (searchParams.get("view") || "comfortable") as "compact" | "comfortable";
   const favoritesParam = searchParams.get("favorites") === "true";
-  const collectionParam = (searchParams.get("collection") || null) as Collection | null;
+  const collectionParam = (searchParams.get("collection") || defaultCollection || null) as Collection | null;
 
   const query = globalQuery;
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
-  const isDefaultView = !query.trim() && !categoryParam && !sortParam && !favoritesParam && !collectionParam;
+  // On collection pages (defaultCollection set), the hero/filtered view logic differs:
+  // show hero when only collection is active (no search/category/sort/favorites)
+  const isDefaultView = !query.trim() && !categoryParam && !sortParam && !favoritesParam && (!collectionParam || !!defaultCollection);
 
   // Sync global store from URL (e.g. shared link)
   useEffect(() => {
@@ -59,10 +65,12 @@ export function HomeContent({ icons, categoryCounts, count, recentIcons, collect
           params.set(key, value);
         }
       }
+      // On /collection/[name] pages, keep the base path and append query params
+      const basePath = defaultCollection ? `/collection/${defaultCollection}` : "/";
       const qs = params.toString();
-      router.replace(qs ? `/?${qs}` : "/", { scroll: false });
+      router.replace(qs ? `${basePath}?${qs}` : basePath, { scroll: false });
     },
-    [router, searchParams]
+    [router, searchParams, defaultCollection]
   );
 
   // Sync global search store changes to URL with debounce
@@ -90,10 +98,14 @@ export function HomeContent({ icons, categoryCounts, count, recentIcons, collect
 
   const handleCollectionSelect = useCallback(
     (collection: Collection | null) => {
-      updateUrl({ collection, category: null, favorites: null });
       setSidebarOpen(false);
+      if (collection) {
+        router.push(`/collection/${collection}`);
+      } else {
+        router.push("/");
+      }
     },
-    [updateUrl, setSidebarOpen]
+    [router, setSidebarOpen]
   );
 
   const handleToggleFavorites = useCallback(() => {
@@ -218,9 +230,10 @@ export function HomeContent({ icons, categoryCounts, count, recentIcons, collect
               count={count}
               recentIcons={recentIcons}
               collections={collections}
+              defaultCollection={defaultCollection}
               onSelectIcon={() => {}}
               onCategorySelect={(cat) => updateUrl({ category: cat })}
-              onCollectionSelect={(col) => updateUrl({ collection: col })}
+              onCollectionSelect={(col) => router.push(`/collection/${col}`)}
             />
           </div>
         ) : (
@@ -338,6 +351,12 @@ export function HomeContent({ icons, categoryCounts, count, recentIcons, collect
           </>
         )}
       </div>
+
+      {/* First-visit onboarding hint */}
+      <OnboardingHint />
+
+      {/* Persistent help button */}
+      <HelpFab />
     </>
   );
 }

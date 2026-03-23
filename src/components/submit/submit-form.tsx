@@ -422,6 +422,7 @@ export function SubmitForm({
           .join("\n")
       : "No file uploaded";
 
+    const timestamp = new Date().toISOString();
     const lines = [
       `## Icon Submission: ${form.iconName || "(unnamed)"}`,
       ``,
@@ -461,6 +462,9 @@ export function SubmitForm({
         2
       ),
       `\`\`\``,
+      ``,
+      `---`,
+      `> Submitted via [thesvg.org](https://thesvg.org/submit) on ${timestamp.slice(0, 10)}`,
     ];
 
     return lines.join("\n");
@@ -468,10 +472,10 @@ export function SubmitForm({
 
   function buildGitHubUrl(): string {
     const title = encodeURIComponent(
-      `[Icon Request] ${form.iconName || "New Icon"}`
+      `[Icon Request] ${form.iconName || "New Icon"} (via thesvg.org)`
     );
     const body = encodeURIComponent(buildSubmissionBody());
-    return `${GITHUB_ISSUES_URL}?title=${title}&body=${body}&labels=icon-request`;
+    return `${GITHUB_ISSUES_URL}?title=${title}&body=${body}&labels=icon-request,submitted-via-thesvg`;
   }
 
   async function handleCopy() {

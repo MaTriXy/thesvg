@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "introducing-thesvg",
+    "title": "Introducing theSVG: The Open SVG Brand Library",
+    "excerpt": "We launched theSVG with 4,000+ brand SVG icons. Free, open-source, and community-driven. Here is why we built it and what is next.",
+    "date": "2026-03-07",
+    "author": "theSVG Team",
+    "tags": ["launch", "open-source"],
+    "body": "Today we are launching theSVG, an open-source library of 4,000+ brand SVG icons for developers and designers.\n\nEvery brand deserves a place. No gatekeeping, no approval queues, no politics. If a brand exists, its icon should be freely available.\n\n## What you get\n\n- **4,000+ brand icons** from sources like Simple Icons, svgl, and lobe-icons, merged and deduplicated\n- **Multiple variants** per icon: color, mono, light, dark, wordmark\n- **Every format**: SVG, JSX, Vue, HTML, CDN link, Data URI\n- **npm packages**: @thesvg/react, @thesvg/vue, @thesvg/svelte, @thesvg/cli\n- **MCP server** for AI assistants like Claude and Cursor\n- **REST API** and jsDelivr CDN with zero auth required\n\n## Why we built this\n\nExisting icon libraries are fragmented. Simple Icons has great coverage but only mono variants. svgl has beautiful color icons but a smaller set. We merged the best of all worlds into one unified library.\n\n## What is next\n\nCloud provider icons (AWS, Azure, GCP), a Figma plugin, and community submissions at scale. Stay tuned."
+  },
+  {
+    "slug": "aws-architecture-icons",
+    "title": "739 Official AWS Architecture Icons Now Available",
+    "excerpt": "Every AWS service, resource, and category icon from the official 2026-Q1 icon set. Lambda, EC2, S3, and 736 more.",
+    "date": "2026-03-15",
+    "author": "theSVG Team",
+    "tags": ["release", "aws", "cloud"],
+    "body": "We just added **739 official AWS Architecture Icons** to theSVG, sourced directly from the AWS 2026-Q1 icon package.\n\n## What is included\n\n- **300 service icons**: Lambda, EC2, S3, RDS, DynamoDB, Bedrock, and every AWS service\n- **400 resource icons**: EC2 instances, S3 buckets, Lambda functions, and specific resource types\n- **26 category icons**: Compute, Storage, Database, AI, and every AWS category with brand colors\n- **13 group icons**: VPC, Region, Availability Zone, and other architecture diagram elements\n\n## Multiple sizes\n\nEach service icon comes in 16px, 32px, 48px (default), and 64px variants. Perfect for architecture diagrams at any scale.\n\n## How to use\n\nBrowse the full collection at [thesvg.org/collection/aws](/collection/aws). Copy SVG, grab a CDN link, or install via npm:\n\n```bash\nnpx @thesvg/cli add aws-aws-lambda\n```\n\nAll icons are provided under CC-BY-ND 2.0 license from AWS."
+  },
+  {
+    "slug": "azure-gcp-icons-launch",
+    "title": "Azure and Google Cloud Icons Join theSVG",
+    "excerpt": "626 Microsoft Azure service icons and 214 Google Cloud Platform icons are now available. theSVG is now the largest free cloud icon library.",
+    "date": "2026-03-22",
+    "author": "theSVG Team",
+    "tags": ["release", "azure", "gcp", "cloud"],
+    "body": "Today we are adding two major cloud providers to theSVG: **Microsoft Azure** (626 icons) and **Google Cloud Platform** (214 icons).\n\nCombined with our existing AWS collection, theSVG now hosts **1,579 cloud provider icons** across all three major platforms, making it the largest free cloud icon library available.\n\n## Azure: 626 Service Icons\n\n29 categories covering every Azure service: Compute, Networking, Databases, AI, Security, DevOps, IoT, and more. From Virtual Machines to Cosmos DB to Azure Functions.\n\nBrowse at [thesvg.org/collection/azure](/collection/azure).\n\n## Google Cloud: 214 Service Icons\n\nAuto-categorized into Compute, Storage, Analytics, Database, Networking, AI, Security, and more. Includes Compute Engine, BigQuery, Cloud Run, GKE, and all major GCP services.\n\nBrowse at [thesvg.org/collection/gcp](/collection/gcp).\n\n## Cross-cloud search\n\nThe best part: search works across all providers. Type \"compute\" and see AWS EC2, Azure VMs, and GCP Compute Engine side by side. Type \"database\" and compare options across all three clouds.\n\n## Total count: 5,500+\n\n| Collection | Icons |\n|-----------|-------|\n| Brand Icons | 4,019 |\n| AWS Architecture | 739 |\n| Azure Services | 626 |\n| Google Cloud | 214 |\n| **Total** | **5,598** |\n\nAll icons are free to use. Azure icons under MIT license, GCP icons under Apache 2.0."
+  },
+  {
+    "slug": "5500-icons-milestone",
+    "title": "5,500+ Icons: Building the Definitive SVG Icon Hub",
+    "excerpt": "From brand logos to cloud architecture diagrams, theSVG now covers every icon a developer needs. Here is our vision for what comes next.",
+    "date": "2026-03-22",
+    "author": "theSVG Team",
+    "tags": ["milestone", "roadmap"],
+    "body": "With 5,500+ icons across brands, AWS, Azure, and GCP, theSVG has grown from a brand icon library into something bigger: **the one place developers go for any SVG icon**.\n\n## What makes theSVG different\n\n- **One library, every icon type**: Brand logos, cloud service icons, and more, all in one search\n- **Every format**: SVG, JSX, Vue, Svelte, CDN, CLI, MCP server\n- **No gatekeeping**: Submit any icon, no approval politics\n- **Developer-first**: npm packages, tree-shakeable, typed, zero config\n\n## What we are working on next\n\n- **Kubernetes and CNCF icons**: The cloud-native ecosystem deserves coverage\n- **Figma plugin**: Insert icons directly into your designs\n- **VS Code extension**: Search and insert icons while coding\n- **Community submissions at scale**: Streamlined review and merge process\n- **Icon comparison**: See AWS Lambda vs Azure Functions vs Cloud Functions side by side\n\n## Get involved\n\ntheSVG is open source. Submit icons, report issues, or contribute code on [GitHub](https://github.com/GLINCKER/thesvg)."
+  }
+]

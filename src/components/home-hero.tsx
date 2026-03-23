@@ -41,16 +41,42 @@ const POPULAR_AWS_SLUGS = [
   "aws-aws-app-runner", "aws-amazon-eventbridge",
 ];
 
+/** Hand-picked popular Azure slugs */
+const POPULAR_AZURE_SLUGS = [
+  "azure-virtual-machines", "azure-app-services", "azure-sql-database",
+  "azure-cosmos-db", "azure-kubernetes-service-aks", "azure-functions",
+  "azure-storage-accounts", "azure-active-directory", "azure-devops",
+  "azure-api-management-services", "azure-key-vaults", "azure-cognitive-services",
+  "azure-load-balancers", "azure-virtual-networks", "azure-container-apps",
+  "azure-application-gateways", "azure-azure-sql", "azure-monitor",
+  "azure-azure-cache-for-redis", "azure-event-hubs",
+  "azure-service-bus", "azure-logic-apps", "azure-bot-services", "azure-cdn-profiles",
+];
+
+/** Hand-picked popular GCP slugs */
+const POPULAR_GCP_SLUGS = [
+  "gcp-compute-engine", "gcp-cloud-storage", "gcp-bigquery",
+  "gcp-cloud-functions", "gcp-cloud-run", "gcp-google-kubernetes-engine",
+  "gcp-cloud-sql", "gcp-app-engine", "gcp-cloud-cdn",
+  "gcp-cloud-build", "gcp-pubsub", "gcp-cloud-spanner",
+  "gcp-vertexai", "gcp-cloud-armor", "gcp-artifact-registry",
+  "gcp-cloud-dns", "gcp-firestore", "gcp-memorystore",
+  "gcp-cloud-monitoring", "gcp-cloud-logging", "gcp-secret-manager",
+  "gcp-identity-and-access-management", "gcp-cloud-load-balancing", "gcp-apigee-api-platform",
+];
+
 const COLLECTION_LABELS: Record<string, { label: string; description: string }> = {
   brands: { label: "Brand Icons", description: "Logos and brand marks" },
   aws: { label: "AWS Architecture", description: "AWS service and resource icons (2026-Q1)" },
+  azure: { label: "Azure Services", description: "Microsoft Azure service icons (2026-Q1)" },
+  gcp: { label: "Google Cloud", description: "Google Cloud Platform icons (2026-Q1)" },
 };
 
 const ALL_SLIDES = [
   {
     badge: "Open Source",
     badgeIcon: Sparkles,
-    title: "The Open SVG Brand Library",
+    title: "5,600+ SVG Icons. Search. Copy. Ship.",
     description: "Search, copy, and ship brand icons in seconds. Free, open-source, and community-driven.",
     cta: { label: "Get Started", href: "/extensions" },
     ctaSecondary: { label: "Submit an Icon", href: "/submit" },
@@ -112,6 +138,58 @@ const ALL_SLIDES = [
     collection: "aws" as const,
     floatSlugs: POPULAR_AWS_SLUGS,
   },
+  {
+    badge: "Microsoft Azure",
+    badgeIcon: Cloud,
+    title: "626 Azure Service Icons",
+    description: "Every Azure service icon for your architecture diagrams. VMs, App Services, SQL, Cosmos DB, and more. Free to use.",
+    cta: { label: "Browse Services", href: "#popular" },
+    ctaSecondary: { label: "All Categories", href: "#categories" },
+    gradient: "from-[#0078d4]/5 via-background to-[#0078d4]/5 dark:from-[#0078d4]/20 dark:via-background dark:to-[#0078d4]/10",
+    accent: "border-[#0078d4]/30 bg-[#0078d4]/10 text-[#0078d4] dark:border-[#0078d4]/30 dark:bg-[#0078d4]/15 dark:text-[#3ba0e6]",
+    blob: "bg-[#0078d4]/10 dark:bg-[#0078d4]/5",
+    collection: "azure" as const,
+    floatSlugs: POPULAR_AZURE_SLUGS,
+  },
+  {
+    badge: "2026-Q1 Release",
+    badgeIcon: Package,
+    title: "Official Azure Architecture Icons",
+    description: "29 categories of Microsoft Azure service icons. Compute, Networking, Databases, AI, Security, and more.",
+    cta: { label: "Browse All", href: "#all" },
+    ctaSecondary: { label: "View License", href: "https://learn.microsoft.com/en-us/azure/architecture/icons/" },
+    gradient: "from-[#0078d4]/5 via-background to-[#50e6ff]/5 dark:from-[#0078d4]/15 dark:via-background dark:to-[#50e6ff]/10",
+    accent: "border-[#50e6ff]/30 bg-[#50e6ff]/10 text-[#0078d4] dark:border-[#50e6ff]/20 dark:bg-[#50e6ff]/10 dark:text-[#50e6ff]",
+    blob: "bg-[#50e6ff]/10 dark:bg-[#50e6ff]/5",
+    collection: "azure" as const,
+    floatSlugs: POPULAR_AZURE_SLUGS,
+  },
+  {
+    badge: "Google Cloud",
+    badgeIcon: Cloud,
+    title: "214 GCP Service Icons",
+    description: "Google Cloud Platform icons for architecture diagrams. Compute Engine, BigQuery, Cloud Run, GKE, and all GCP services.",
+    cta: { label: "Browse Services", href: "#popular" },
+    ctaSecondary: { label: "All Categories", href: "#categories" },
+    gradient: "from-[#4285f4]/5 via-background to-[#34a853]/5 dark:from-[#4285f4]/20 dark:via-background dark:to-[#34a853]/10",
+    accent: "border-[#4285f4]/30 bg-[#4285f4]/10 text-[#4285f4] dark:border-[#4285f4]/30 dark:bg-[#4285f4]/15 dark:text-[#6aa5f8]",
+    blob: "bg-[#4285f4]/10 dark:bg-[#4285f4]/5",
+    collection: "gcp" as const,
+    floatSlugs: POPULAR_GCP_SLUGS,
+  },
+  {
+    badge: "Apache 2.0 License",
+    badgeIcon: Package,
+    title: "Official Google Cloud Icons",
+    description: "Free GCP icons under Apache 2.0. Auto-categorized into Compute, Storage, AI, Networking, and more.",
+    cta: { label: "Browse All", href: "#all" },
+    ctaSecondary: { label: "View License", href: "https://cloud.google.com/icons" },
+    gradient: "from-[#ea4335]/5 via-background to-[#fbbc05]/5 dark:from-[#ea4335]/10 dark:via-background dark:to-[#fbbc05]/10",
+    accent: "border-[#34a853]/30 bg-[#34a853]/10 text-[#34a853] dark:border-[#34a853]/20 dark:bg-[#34a853]/10 dark:text-[#34a853]",
+    blob: "bg-[#34a853]/10 dark:bg-[#34a853]/5",
+    collection: "gcp" as const,
+    floatSlugs: POPULAR_GCP_SLUGS,
+  },
 ];
 
 const SLIDE_DURATION = 6000;
@@ -122,6 +200,7 @@ interface HomeHeroProps {
   count: number;
   recentIcons: IconEntry[];
   collections: { name: Collection; count: number }[];
+  defaultCollection?: Collection;
   onSelectIcon: (icon: IconEntry) => void;
   onCategorySelect: (category: string) => void;
   onCollectionSelect: (collection: string) => void;
@@ -133,22 +212,34 @@ export function HomeHero({
   count,
   recentIcons,
   collections,
+  defaultCollection,
   onCategorySelect,
   onCollectionSelect,
 }: HomeHeroProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState<IconEntry | null>(null);
-  const [activeCollection, setActiveCollection] = useState<Collection>("brands");
+  const [activeCollection, setActiveCollection] = useState<Collection>(defaultCollection ?? "brands");
 
-  // Auto-rotate carousel through all slides
+  // Filter slides by active collection
+  const collectionSlides = useMemo(
+    () => ALL_SLIDES.filter((s) => s.collection === activeCollection),
+    [activeCollection]
+  );
+
+  // Reset slide when collection changes
   useEffect(() => {
-    if (isPaused) return;
+    setCurrentSlide(0);
+  }, [activeCollection]);
+
+  // Auto-rotate carousel through collection slides
+  useEffect(() => {
+    if (isPaused || collectionSlides.length <= 1) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % ALL_SLIDES.length);
+      setCurrentSlide((prev) => (prev + 1) % collectionSlides.length);
     }, SLIDE_DURATION);
     return () => clearInterval(timer);
-  }, [isPaused]);
+  }, [isPaused, collectionSlides.length]);
 
   const handleSelectIcon = useCallback((icon: IconEntry) => {
     setSelectedIcon(icon);
@@ -160,9 +251,15 @@ export function HomeHero({
     [icons, activeCollection]
   );
 
-  // Brand popular icons
+  // Popular icons per collection
   const popularIcons = useMemo(() => {
-    const slugs = activeCollection === "aws" ? POPULAR_AWS_SLUGS : POPULAR_SLUGS;
+    const slugMap: Record<string, string[]> = {
+      brands: POPULAR_SLUGS,
+      aws: POPULAR_AWS_SLUGS,
+      azure: POPULAR_AZURE_SLUGS,
+      gcp: POPULAR_GCP_SLUGS,
+    };
+    const slugs = slugMap[activeCollection] ?? POPULAR_SLUGS;
     return slugs
       .map((slug) => icons.find((i) => i.slug === slug))
       .filter(Boolean) as IconEntry[];
@@ -191,12 +288,12 @@ export function HomeHero({
       .slice(0, 12);
   }, [activeCollection, collectionIcons, recentIcons]);
 
-  const slide = ALL_SLIDES[currentSlide];
+  const slide = collectionSlides[currentSlide % collectionSlides.length];
   const BadgeIcon = slide.badgeIcon;
 
   // Pick 6 floating icons matching the current slide's collection
   const floatingIcons = useMemo(() => {
-    const slugs = ALL_SLIDES[currentSlide].floatSlugs.slice(0, 6);
+    const slugs = collectionSlides[currentSlide % collectionSlides.length].floatSlugs.slice(0, 6);
     return slugs
       .map((s) => icons.find((i) => i.slug === s))
       .filter(Boolean) as IconEntry[];
@@ -214,88 +311,97 @@ export function HomeHero({
 
   return (
     <div className="space-y-8 pb-6">
-      {/* Hero carousel */}
-      <div
-        className={`relative overflow-hidden rounded-2xl border border-border/30 bg-gradient-to-br ${slide.gradient} px-6 py-12 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] transition-colors duration-700 sm:px-10 sm:py-16 dark:border-white/[0.06]`}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        <div className="relative z-10 max-w-2xl">
-          {/* Slide content with fade */}
-          <div key={currentSlide} className="animate-fade-in">
-            <div className={`mb-3 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${slide.accent}`}>
-              <BadgeIcon className="h-3 w-3" />
-              {slide.badge === "Open Source"
-                ? `${count.toLocaleString()}+ icons`
-                : slide.badge}
-            </div>
-            <h2 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">
-              {slide.title}
-            </h2>
-            <p className="mb-6 max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
-              {slide.description}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {slide.cta.href.startsWith("http") ? (
-                <a
-                  href={slide.cta.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
-                >
-                  {slide.cta.label}
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              ) : (
+      {/* Hero carousel - lifted card with depth */}
+      <div className="relative">
+        {/* Bottom shadow layer for lifted effect */}
+        <div className="absolute -bottom-2 left-4 right-4 h-8 rounded-3xl bg-black/5 blur-xl dark:bg-black/30" />
+        <div className="absolute -bottom-1 left-8 right-8 h-4 rounded-2xl bg-black/[0.03] blur-md dark:bg-black/20" />
+
+        <div
+          className={`relative overflow-hidden rounded-3xl border border-border/40 bg-gradient-to-br ${slide.gradient} px-6 py-12 shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08),0_2px_8px_-2px_rgba(0,0,0,0.04),inset_0_1px_0_rgba(255,255,255,0.15)] transition-all duration-700 sm:px-10 sm:py-16 dark:border-white/[0.08] dark:shadow-[0_8px_30px_-6px_rgba(0,0,0,0.4),0_2px_8px_-2px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.05)]`}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Top highlight edge */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent dark:via-white/10" />
+
+          <div className="relative z-10 max-w-2xl">
+            {/* Slide content with fade */}
+            <div key={currentSlide} className="animate-fade-in">
+              <div className={`mb-3 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium shadow-sm ${slide.accent}`}>
+                <BadgeIcon className="h-3 w-3" />
+                {slide.badge === "Open Source"
+                  ? `${count.toLocaleString()}+ icons`
+                  : slide.badge}
+              </div>
+              <h2 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">
+                {slide.title}
+              </h2>
+              <p className="mb-6 max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
+                {slide.description}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {slide.cta.href.startsWith("http") ? (
+                  <a
+                    href={slide.cta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-foreground px-5 py-2.5 text-sm font-medium text-background shadow-lg shadow-black/10 transition-all hover:opacity-90 hover:shadow-xl dark:shadow-black/30"
+                  >
+                    {slide.cta.label}
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </a>
+                ) : (
+                  <Link
+                    href={slide.cta.href}
+                    className="inline-flex items-center gap-2 rounded-xl bg-foreground px-5 py-2.5 text-sm font-medium text-background shadow-lg shadow-black/10 transition-all hover:opacity-90 hover:shadow-xl dark:shadow-black/30"
+                  >
+                    {slide.cta.label}
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                )}
                 <Link
-                  href={slide.cta.href}
-                  className="inline-flex items-center gap-2 rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90"
+                  href={slide.ctaSecondary.href}
+                  className="inline-flex items-center gap-2 rounded-xl border border-border/60 bg-background/50 px-5 py-2.5 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm transition-all hover:bg-background/80 hover:shadow-md dark:border-white/[0.1] dark:bg-white/[0.05]"
                 >
-                  {slide.cta.label}
-                  <ArrowRight className="h-3.5 w-3.5" />
+                  {slide.ctaSecondary.label}
                 </Link>
-              )}
-              <Link
-                href={slide.ctaSecondary.href}
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent dark:border-white/[0.08]"
-              >
-                {slide.ctaSecondary.label}
-              </Link>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Decorative blobs */}
-        <div className={`pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full ${slide.blob} opacity-80 blur-3xl transition-colors duration-700`} />
-        <div className={`pointer-events-none absolute -bottom-14 -right-14 h-52 w-52 rounded-full ${slide.blob} opacity-70 blur-2xl transition-colors duration-700`} />
+          {/* Decorative blobs */}
+          <div className={`pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full ${slide.blob} opacity-80 blur-3xl transition-colors duration-700`} />
+          <div className={`pointer-events-none absolute -bottom-14 -right-14 h-52 w-52 rounded-full ${slide.blob} opacity-70 blur-2xl transition-colors duration-700`} />
+          <div className={`pointer-events-none absolute top-1/2 left-1/3 h-40 w-40 -translate-y-1/2 rounded-full ${slide.blob} opacity-30 blur-3xl transition-colors duration-700`} />
 
-        {/* Floating scattered icons */}
-        <div className="pointer-events-none absolute inset-0 hidden lg:block">
-          {floatingIcons.map((icon, i) => {
-            const pos = FLOAT_POSITIONS[i];
-            return (
-              <div
-                key={icon.slug}
-                className={`absolute animate-float ${pos.opacity}`}
-                style={{
-                  top: pos.top,
-                  right: pos.right,
-                  animationDelay: pos.delay,
-                  animationDuration: `${4 + i * 0.5}s`,
-                }}
-              >
-                <div className={`${pos.size} rounded-xl ${slide.collection === "aws" ? "bg-[#ff9900]/10 dark:bg-[#ff9900]/5" : "bg-background/30"} p-1.5 backdrop-blur-sm`}>
-                  <img src={icon.variants.light || icon.variants.default} alt="" className="h-full w-full object-contain dark:hidden" />
-                  <img src={icon.variants.dark || icon.variants.default} alt="" className="hidden h-full w-full object-contain dark:block" />
+          {/* Floating scattered icons */}
+          <div className="pointer-events-none absolute inset-0 hidden lg:block">
+            {floatingIcons.map((icon, i) => {
+              const pos = FLOAT_POSITIONS[i];
+              return (
+                <div
+                  key={icon.slug}
+                  className={`absolute animate-float ${pos.opacity}`}
+                  style={{
+                    top: pos.top,
+                    right: pos.right,
+                    animationDelay: pos.delay,
+                    animationDuration: `${4 + i * 0.5}s`,
+                  }}
+                >
+                  <div className={`${pos.size} rounded-xl border border-white/10 ${slide.collection === "aws" ? "bg-[#ff9900]/10 dark:bg-[#ff9900]/5" : slide.collection === "azure" ? "bg-[#0078d4]/10 dark:bg-[#0078d4]/5" : slide.collection === "gcp" ? "bg-[#4285f4]/10 dark:bg-[#4285f4]/5" : "bg-background/30"} p-1.5 shadow-lg shadow-black/5 backdrop-blur-sm dark:border-white/5 dark:shadow-black/20`}>
+                    <img src={icon.variants.light || icon.variants.default} alt="" className="h-full w-full object-contain dark:hidden" />
+                    <img src={icon.variants.dark || icon.variants.default} alt="" className="hidden h-full w-full object-contain dark:block" />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
         {/* Thin glowing progress dots */}
         <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2">
-          {ALL_SLIDES.map((_, i) => (
+          {collectionSlides.map((_, i) => (
             <button
               key={i}
               type="button"
@@ -324,6 +430,7 @@ export function HomeHero({
             </button>
           ))}
         </div>
+      </div>
       </div>
 
       {/* Collection tabs */}
@@ -365,7 +472,7 @@ export function HomeHero({
       <section>
         <div className="mb-4 flex items-center gap-2">
           <h2 className="text-sm font-semibold text-foreground">
-            {activeCollection === "aws" ? "Popular AWS Services" : "Popular"}
+            {activeCollection === "aws" ? "Popular AWS Services" : activeCollection === "azure" ? "Popular Azure Services" : activeCollection === "gcp" ? "Popular GCP Services" : "Popular"}
           </h2>
           <div className="h-px flex-1 bg-border/40 dark:bg-white/[0.04]" />
         </div>
@@ -422,7 +529,7 @@ export function HomeHero({
       <section>
         <div className="mb-4 flex items-center gap-2">
           <h2 className="text-sm font-semibold text-foreground">
-            {activeCollection === "aws" ? "All AWS Icons" : "All Icons"}
+            {activeCollection === "brands" ? "All Icons" : `All ${COLLECTION_LABELS[activeCollection]?.label ?? activeCollection} Icons`}
           </h2>
           <span className="text-xs text-muted-foreground">{collectionIcons.length.toLocaleString()}</span>
           <div className="h-px flex-1 bg-border/40 dark:bg-white/[0.04]" />
@@ -430,10 +537,20 @@ export function HomeHero({
         <IconGrid icons={collectionIcons} />
       </section>
 
-      {/* AWS attribution */}
+      {/* Cloud provider attributions */}
       {activeCollection === "aws" && (
         <p className="text-center text-[11px] text-muted-foreground/60">
           AWS Architecture Icons provided under CC-BY-ND 2.0. Amazon Web Services and all related marks are trademarks of Amazon.com, Inc.
+        </p>
+      )}
+      {activeCollection === "azure" && (
+        <p className="text-center text-[11px] text-muted-foreground/60">
+          Microsoft Azure icons provided under MIT license. Microsoft Azure and all related marks are trademarks of Microsoft Corporation.
+        </p>
+      )}
+      {activeCollection === "gcp" && (
+        <p className="text-center text-[11px] text-muted-foreground/60">
+          Google Cloud icons provided under Apache 2.0 license. Google Cloud and all related marks are trademarks of Google LLC.
         </p>
       )}
 
