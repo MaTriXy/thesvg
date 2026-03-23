@@ -1,5 +1,11 @@
 # @thesvg/icons
 
+## 2.0.1
+
+### Patch Changes
+
+- Merge pull request [#60](https://github.com/glincker/thesvg/issues/60) from glincker/feat/azure-gcp-collections-v2
+
 ## 2.0.0
 
 ### Major Changes
