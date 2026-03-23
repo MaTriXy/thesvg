@@ -23,10 +23,21 @@ export const metadata: Metadata = {
   title: "Compare Brand Icon Libraries - theSVG vs Simple Icons vs svgl vs Lucide vs Font Awesome vs Iconify",
   description:
     "Honest feature comparison of brand SVG icon libraries. Compare theSVG, Simple Icons, svgl, Lucide, Font Awesome, Iconify, and Devicon by icon count, variants, npm packages, API, and tooling.",
+  keywords: [
+    "icon library comparison",
+    "theSVG vs Simple Icons",
+    "best SVG icon library",
+    "brand icon library comparison",
+    "Simple Icons alternative",
+    "svgl alternative",
+    "SVG icon library for developers",
+    "free brand icon library",
+  ],
   openGraph: {
     title: "Compare Brand Icon Libraries - theSVG vs Simple Icons vs svgl vs Lucide vs Font Awesome",
     description:
       "Honest feature comparison of brand SVG icon libraries. Compare theSVG, Simple Icons, svgl, Lucide, Font Awesome, Iconify, and Devicon.",
+    siteName: "theSVG",
   },
   alternates: {
     canonical: "https://thesvg.org/compare",
@@ -70,9 +81,9 @@ const LIBRARIES: LibInfo[] = [
   {
     name: "theSVG",
     url: "https://thesvg.org",
-    icons: "4,000+",
-    focus: "Brand logos",
-    desc: "Largest brand SVG library with multi-variant support (light/dark/wordmark/mono). Full toolchain: npm, React/Vue/Svelte, CLI, API, MCP server.",
+    icons: "5,500+",
+    focus: "Brand logos + Cloud icons",
+    desc: "Largest brand SVG library with multi-variant support (light/dark/wordmark/mono). Includes AWS, Azure, and GCP cloud icons. Full toolchain: npm, React/Vue/Svelte, CLI, API, MCP server.",
     highlight: true,
   },
   {

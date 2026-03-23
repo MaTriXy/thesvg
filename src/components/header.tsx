@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Github, Menu, Moon, Plus, Search, Shapes, Sun, X } from "lucide-react";
+import { ArrowRight, Cloud, FileText, Github, Menu, Moon, Package, Plus, Search, Shapes, Sparkles, Sun, X, Zap } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -23,12 +23,45 @@ function AwsLogo({ className }: { className?: string }) {
   );
 }
 
+function AzureLogo({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" className={className}>
+      <defs>
+        <linearGradient id="az-a" x1="42.83" x2="15.79" y1="12.69" y2="92.57" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#114a8b" />
+          <stop offset="1" stopColor="#0669bc" />
+        </linearGradient>
+        <linearGradient id="az-c" x1="47.84" x2="77.52" y1="10.36" y2="89.44" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#3ccbf4" />
+          <stop offset="1" stopColor="#2892df" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#az-a)" d="M33.34 6.54h26.04l-27.03 80.1a4.15 4.15 0 0 1-3.94 2.81H8.15a4.14 4.14 0 0 1-3.93-5.47L29.4 9.38a4.15 4.15 0 0 1 3.94-2.83z" />
+      <path fill="#0078d4" d="M71.17 60.26H29.88a1.91 1.91 0 0 0-1.3 3.31l26.53 24.76a4.17 4.17 0 0 0 2.85 1.13h23.38z" />
+      <path fill="url(#az-c)" d="M66.6 9.36a4.14 4.14 0 0 0-3.93-2.82H33.65a4.15 4.15 0 0 1 3.93 2.82l25.18 74.62a4.15 4.15 0 0 1-3.93 5.48h29.02a4.15 4.15 0 0 0 3.93-5.48z" />
+    </svg>
+  );
+}
+
+function GcpLogo({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" className={className}>
+      <path fill="#EA4335" d="M10.313 5.376l1.887-1.5-.332-.414a5.935 5.935 0 00-5.586-1.217 5.89 5.89 0 00-3.978 4.084c-.03.113.312-.098.463-.056l2.608-.428s.127-.124.201-.205c1.16-1.266 3.126-1.432 4.465-.354l.272.09z" />
+      <path fill="#4285F4" d="M13.637 6.3a5.835 5.835 0 00-1.77-2.838l-1.83 1.82a3.226 3.226 0 011.193 2.564v.323c.9 0 1.63.725 1.63 1.62 0 .893-.73 1.619-1.63 1.619l-3.257-.003-.325.035v2.507l.325.053h3.257a4.234 4.234 0 004.08-2.962A4.199 4.199 0 0013.636 6.3z" />
+      <path fill="#34A853" d="M4.711 13.999H7.97v-2.594H4.71c-.232 0-.461-.066-.672-.161l-.458.14-1.313 1.297-.114.447a4.254 4.254 0 002.557.87z" />
+      <path fill="#FBBC05" d="M4.711 5.572A4.234 4.234 0 00.721 8.44a4.206 4.206 0 001.433 4.688l1.89-1.884a1.617 1.617 0 01.44-3.079 1.63 1.63 0 011.714.936l1.89-1.878A4.24 4.24 0 004.71 5.572z" />
+    </svg>
+  );
+}
+
 function SubmitButton() {
   return (
     <Link href="/submit" className="group/submit relative">
-      <span className="relative inline-flex h-7 items-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-b from-orange-400 to-orange-600 px-3 text-xs font-semibold text-white shadow-[0_1px_2px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-200 hover:from-orange-400 hover:to-orange-500 hover:shadow-[0_2px_8px_rgba(249,115,22,0.4),inset_0_1px_0_rgba(255,255,255,0.25)] active:scale-[0.97] active:shadow-[0_0px_1px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(0,0,0,0.1)]">
-        <Plus className="h-3 w-3" />
-        <span className="hidden sm:inline">Submit</span>
+      <span className="relative inline-flex h-8 items-center gap-1.5 overflow-hidden rounded-lg bg-gradient-to-b from-orange-400 to-orange-600 px-3.5 text-xs font-semibold text-white shadow-[0_1px_3px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.2)] transition-all duration-200 hover:from-orange-400 hover:to-orange-500 hover:shadow-[0_3px_12px_rgba(249,115,22,0.4),inset_0_1px_0_rgba(255,255,255,0.25)] active:scale-[0.97] active:shadow-[0_0px_1px_rgba(0,0,0,0.3),inset_0_2px_4px_rgba(0,0,0,0.1)]">
+        {/* Shimmer */}
+        <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 group-hover/submit:translate-x-full" />
+        <Plus className="relative h-3.5 w-3.5 transition-transform duration-200 group-hover/submit:rotate-90" />
+        <span className="relative hidden sm:inline">Submit Icon</span>
       </span>
     </Link>
   );
@@ -56,7 +89,41 @@ export function Header() {
   const [focused, setFocused] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(-1);
 
-  const activeCollection = searchParams.get("collection") || null;
+  const activeCollection =
+    searchParams.get("collection") ||
+    (pathname.startsWith("/collection/") ? pathname.split("/")[2] : null);
+
+  // Typewriter placeholder effect
+  const PLACEHOLDER_BRANDS = ["GitHub", "Stripe", "Figma", "Docker", "AWS Lambda", "Azure Functions", "BigQuery", "Vercel", "React", "Tailwind CSS"];
+  const [placeholderIdx, setPlaceholderIdx] = useState(0);
+  const [charIdx, setCharIdx] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    if (query || focused) return;
+    const brand = PLACEHOLDER_BRANDS[placeholderIdx];
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (charIdx < brand.length) {
+          setCharIdx(charIdx + 1);
+        } else {
+          setTimeout(() => setIsDeleting(true), 1500);
+        }
+      } else {
+        if (charIdx > 0) {
+          setCharIdx(charIdx - 1);
+        } else {
+          setIsDeleting(false);
+          setPlaceholderIdx((placeholderIdx + 1) % PLACEHOLDER_BRANDS.length);
+        }
+      }
+    }, isDeleting ? 40 : 80);
+    return () => clearTimeout(timer);
+  }, [charIdx, isDeleting, placeholderIdx, query, focused]);
+
+  const dynamicPlaceholder = query || focused
+    ? "Search icons..."
+    : `Search "${PLACEHOLDER_BRANDS[placeholderIdx].slice(0, charIdx)}"`;
 
   const isHome = pathname === "/";
 
@@ -71,7 +138,8 @@ export function Header() {
     return searchIcons(icons, query).slice(0, 6);
   }, [query]);
 
-  const showDropdown = focused && query.trim().length >= 2 && suggestions.length > 0;
+  const hasQuery = query.trim().length >= 2;
+  const showDropdown = focused && (hasQuery ? suggestions.length > 0 : true);
 
   // Reset selected index when suggestions change
   useEffect(() => {
@@ -195,7 +263,7 @@ export function Header() {
               Brands
             </Link>
             <Link
-              href="/?collection=aws"
+              href="/collection/aws"
               className={cn(
                 "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all",
                 activeCollection === "aws"
@@ -207,20 +275,32 @@ export function Header() {
               <AwsLogo className="h-4 w-4" />
               AWS
             </Link>
-            <span
-              className="inline-flex cursor-default items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-muted-foreground/30"
-              title="Coming soon"
-              aria-disabled="true"
+            <Link
+              href="/collection/gcp"
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all",
+                activeCollection === "gcp"
+                  ? "bg-foreground text-background shadow-sm"
+                  : "text-muted-foreground hover:bg-accent hover:text-foreground"
+              )}
+              aria-current={activeCollection === "gcp" ? "page" : undefined}
             >
+              <GcpLogo className="h-4 w-4" />
               GCP
-            </span>
-            <span
-              className="inline-flex cursor-default items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-muted-foreground/30"
-              title="Coming soon"
-              aria-disabled="true"
+            </Link>
+            <Link
+              href="/collection/azure"
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-all",
+                activeCollection === "azure"
+                  ? "bg-foreground text-background shadow-sm"
+                  : "text-muted-foreground hover:bg-accent hover:text-foreground"
+              )}
+              aria-current={activeCollection === "azure" ? "page" : undefined}
             >
+              <AzureLogo className="h-4 w-4" />
               Azure
-            </span>
+            </Link>
           </nav>
 
           {/* Center: search with dropdown */}
@@ -234,8 +314,8 @@ export function Header() {
                 onChange={(e) => handleSearchChange(e.target.value)}
                 onFocus={() => setFocused(true)}
                 onKeyDown={handleKeyNav}
-                placeholder="Search icons..."
-                className="h-9 w-full rounded-xl border border-border/40 bg-muted/30 pr-16 pl-9 text-sm outline-none transition-all placeholder:text-muted-foreground/40 focus:border-border/60 focus:bg-background focus:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.06)] focus:ring-1 focus:ring-ring/20 dark:border-white/[0.06] dark:bg-white/[0.03] dark:focus:border-white/[0.1] dark:focus:bg-white/[0.05] dark:focus:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.3)]"
+                placeholder={dynamicPlaceholder}
+                className="h-9 w-full rounded-xl border border-border bg-muted/40 pr-16 pl-9 text-sm shadow-sm outline-none transition-all placeholder:text-muted-foreground/50 focus:border-primary/40 focus:bg-background focus:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.08)] focus:ring-1 focus:ring-ring/30 dark:border-white/[0.08] dark:bg-white/[0.04] dark:focus:border-white/[0.15] dark:focus:bg-white/[0.06] dark:focus:shadow-[0_2px_12px_-2px_rgba(0,0,0,0.3)]"
                 aria-label="Search icons"
                 role="combobox"
                 aria-expanded={showDropdown}
@@ -259,7 +339,7 @@ export function Header() {
               </div>
             </div>
 
-            {/* Search dropdown - positioned relative to form for full-width on mobile */}
+            {/* Search dropdown */}
             {showDropdown && (
               <div
                 ref={dropdownRef}
@@ -267,41 +347,98 @@ export function Header() {
                 className="absolute top-full right-0 left-0 z-50 mx-auto mt-1.5 max-w-xl overflow-hidden rounded-xl border border-border/40 bg-background/95 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.15)] backdrop-blur-2xl backdrop-saturate-150 dark:border-white/[0.1] dark:bg-[rgba(10,10,10,0.95)] dark:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.6)]"
                 role="listbox"
               >
-                <div className="px-2 py-1.5">
-                  <p className="px-2 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground/50">
-                    Suggestions
-                  </p>
-                  {suggestions.map((icon, i) => (
-                    <button
-                      key={icon.slug}
-                      type="button"
-                      role="option"
-                      aria-selected={i === selectedIdx}
-                      onMouseEnter={() => setSelectedIdx(i)}
-                      onClick={() => navigateToIcon(icon.slug)}
-                      className={`flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left transition-colors sm:gap-3 ${
-                        i === selectedIdx
-                          ? "bg-accent text-accent-foreground"
-                          : "text-foreground hover:bg-accent/50"
-                      }`}
-                    >
-                      <img
-                        src={icon.variants.default}
-                        alt=""
-                        className="h-6 w-6 shrink-0 rounded object-contain"
-                      />
-                      <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm font-medium">{icon.title}</p>
-                        <p className="truncate text-[11px] text-muted-foreground">
-                          {icon.categories[0] || icon.slug}
-                        </p>
-                      </div>
-                      <span className="hidden shrink-0 text-[10px] text-muted-foreground/50 sm:inline">
-                        {icon.slug}
-                      </span>
-                    </button>
-                  ))}
-                </div>
+                {hasQuery ? (
+                  /* Search results */
+                  <div className="px-2 py-1.5">
+                    <p className="px-2 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground/50">
+                      Results
+                    </p>
+                    {suggestions.map((icon, i) => (
+                      <button
+                        key={icon.slug}
+                        type="button"
+                        role="option"
+                        aria-selected={i === selectedIdx}
+                        onMouseEnter={() => setSelectedIdx(i)}
+                        onClick={() => navigateToIcon(icon.slug)}
+                        className={`flex w-full items-center gap-2 rounded-lg px-2 py-2 text-left transition-colors sm:gap-3 ${
+                          i === selectedIdx
+                            ? "bg-accent text-accent-foreground"
+                            : "text-foreground hover:bg-accent/50"
+                        }`}
+                      >
+                        <img
+                          src={icon.variants.default}
+                          alt=""
+                          className="h-6 w-6 shrink-0 rounded object-contain"
+                        />
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-medium">{icon.title}</p>
+                          <p className="truncate text-[11px] text-muted-foreground">
+                            {icon.categories[0] || icon.slug}
+                          </p>
+                        </div>
+                        <span className="hidden shrink-0 text-[10px] text-muted-foreground/50 sm:inline">
+                          {icon.slug}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  /* Quick links when focused with no query */
+                  <div className="px-2 py-2">
+                    <p className="px-2 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground/50">
+                      Quick access
+                    </p>
+                    {[
+                      { href: "/collection/brands", icon: Shapes, label: "Brand Icons", count: "4,019", color: "text-orange-500" },
+                      { href: "/collection/aws", icon: Cloud, label: "AWS Architecture", count: "739", color: "text-[#ff9900]" },
+                      { href: "/collection/azure", icon: Cloud, label: "Azure Services", count: "626", color: "text-[#0078d4]" },
+                      { href: "/collection/gcp", icon: Cloud, label: "Google Cloud", count: "214", color: "text-[#4285f4]" },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setFocused(false)}
+                        className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-left transition-colors hover:bg-accent/50"
+                      >
+                        <item.icon className={`h-4 w-4 shrink-0 ${item.color}`} />
+                        <span className="flex-1 text-sm font-medium text-foreground">{item.label}</span>
+                        <span className="text-[10px] text-muted-foreground/50">{item.count}</span>
+                        <ArrowRight className="h-3 w-3 text-muted-foreground/30" />
+                      </Link>
+                    ))}
+
+                    <div className="my-1.5 h-px bg-border/30 dark:bg-white/[0.04]" />
+
+                    <p className="px-2 py-1 text-[10px] font-medium uppercase tracking-wider text-muted-foreground/50">
+                      Pages
+                    </p>
+                    {[
+                      { href: "/extensions", icon: Package, label: "Extensions & Integrations" },
+                      { href: "/blog", icon: FileText, label: "Blog & Updates" },
+                      { href: "/submit", icon: Sparkles, label: "Submit an Icon" },
+                      { href: "/api-docs", icon: Zap, label: "API Reference" },
+                    ].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setFocused(false)}
+                        className="flex w-full items-center gap-3 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-accent/50"
+                      >
+                        <item.icon className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60" />
+                        <span className="flex-1 text-xs text-muted-foreground hover:text-foreground">{item.label}</span>
+                        <ArrowRight className="h-3 w-3 text-muted-foreground/20" />
+                      </Link>
+                    ))}
+
+                    <div className="my-1.5 h-px bg-border/30 dark:bg-white/[0.04]" />
+
+                    <p className="px-2 py-1 text-[10px] text-muted-foreground/40">
+                      Try: &ldquo;lambda&rdquo; &ldquo;stripe&rdquo; &ldquo;compute&rdquo; &ldquo;react&rdquo;
+                    </p>
+                  </div>
+                )}
                 <div className="hidden border-t border-border/30 px-3 py-1.5 sm:block dark:border-white/[0.04]">
                   <p className="text-[10px] text-muted-foreground/50">
                     <kbd className="rounded border border-border/30 px-1 font-mono dark:border-white/[0.06]">&uarr;&darr;</kbd>{" "}
@@ -327,40 +464,42 @@ export function Header() {
 
             <SubmitButton />
 
-            <div className="ml-0.5 flex items-center">
+            <div className="ml-1 flex items-center gap-1">
               <a
                 href="https://www.npmjs.com/package/thesvg"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="npm"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="View on npm"
+                className="hidden items-center gap-1.5 rounded-lg border border-border/50 px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:border-[#cb3837]/30 hover:bg-[#cb3837]/5 hover:text-[#cb3837] sm:inline-flex dark:border-white/[0.06] dark:hover:border-[#cb3837]/30"
               >
                 <img
                   src="/icons/npm/default.svg"
                   alt="npm"
-                  width={15}
-                  height={15}
-                  className="h-[15px] w-[15px]"
+                  width={18}
+                  height={18}
+                  className="h-[18px] w-[18px]"
                 />
+                <span className="hidden lg:inline">npm</span>
               </a>
               <a
                 href="https://github.com/GLINCKER/thesvg"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
+                aria-label="View on GitHub"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-border/50 px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:border-foreground/20 hover:bg-accent hover:text-foreground dark:border-white/[0.08] dark:hover:border-white/20 dark:hover:bg-white/[0.06]"
               >
-                <Github className="h-3.5 w-3.5" />
+                <Github className="h-4 w-4" />
+                <span className="hidden lg:inline">GitHub</span>
               </a>
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-7 w-7"
+                className="h-8 w-8"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 aria-label="Toggle theme"
               >
-                <Sun className="h-3.5 w-3.5 scale-100 rotate-0 transition-transform dark:scale-0 dark:-rotate-90" />
-                <Moon className="absolute h-3.5 w-3.5 scale-0 rotate-90 transition-transform dark:scale-100 dark:rotate-0" />
+                <Sun className="h-4 w-4 scale-100 rotate-0 transition-transform dark:scale-0 dark:-rotate-90" />
+                <Moon className="absolute h-4 w-4 scale-0 rotate-90 transition-transform dark:scale-100 dark:rotate-0" />
               </Button>
             </div>
           </div>

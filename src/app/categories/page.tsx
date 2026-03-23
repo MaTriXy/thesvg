@@ -12,10 +12,20 @@ import { SidebarShell } from "@/components/layout/sidebar-shell";
 export const metadata: Metadata = {
   title: "Browse All Categories",
   description:
-    "Explore all icon categories on theSVG. Browse 4,600+ brand and AWS architecture SVG icons organized by category.",
+    "Explore all icon categories on theSVG. Browse 5,500+ brand, AWS, Azure, and GCP SVG icons organized by category.",
+  keywords: [
+    "SVG icon categories",
+    "brand icon categories",
+    "AWS icon categories",
+    "Azure icon categories",
+    "GCP icon categories",
+    "icon browser",
+    "browse SVG icons",
+  ],
   openGraph: {
     title: "Browse All Categories | theSVG",
     description: "Explore all icon categories on theSVG.",
+    siteName: "theSVG",
   },
   alternates: { canonical: "https://thesvg.org/categories" },
 };

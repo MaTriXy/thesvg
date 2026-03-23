@@ -10,11 +10,22 @@ import { TableOfContents } from "@/components/api-docs/table-of-contents";
 export const metadata: Metadata = {
   title: "API Reference - Free Brand SVG API",
   description:
-    "Free REST API and CDN for brand SVG icons. Fetch 4,700+ brand logos programmatically via jsDelivr CDN. No authentication, no rate limits. Open-source icon API.",
+    "Free REST API and CDN for brand SVG icons. Fetch 5,500+ brand, AWS, Azure, and GCP logos programmatically via jsDelivr CDN. No authentication, no rate limits. Open-source icon API.",
+  keywords: [
+    "SVG icon API",
+    "brand icon API",
+    "free icon CDN",
+    "SVG REST API",
+    "brand logo API",
+    "jsDelivr icon CDN",
+    "open source icon API",
+    "SVG download API",
+  ],
   openGraph: {
     title: "API Reference - Free Brand SVG API | theSVG",
     description:
-      "Free REST API and CDN for 4,700+ brand SVG icons. No auth required.",
+      "Free REST API and CDN for 5,500+ SVG icons. No auth required.",
+    siteName: "theSVG",
   },
   alternates: { canonical: "https://thesvg.org/api-docs" },
 };

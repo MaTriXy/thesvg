@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import {
   ArrowUpRight,
   Check,
@@ -28,7 +29,14 @@ interface IconDetailPageProps {
 }
 
 export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps) {
-  const [activeVariant, setActiveVariant] = useState("default");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Read variant from URL param, fallback to "default"
+  const variantParam = searchParams.get("variant");
+  const initialVariant = variantParam && icon.variants[variantParam as keyof typeof icon.variants] ? variantParam : "default";
+  const [activeVariant, setActiveVariant] = useState(initialVariant);
   const [svgContent, setSvgContent] = useState("");
 
   const [downloaded, setDownloaded] = useState(false);
@@ -37,6 +45,19 @@ export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps)
   const isFavorite = useFavoritesStore((s) =>
     s.favorites.includes(icon.slug)
   );
+
+  // Update URL when variant changes (shareable link)
+  const handleVariantSelect = useCallback((variant: string) => {
+    setActiveVariant(variant);
+    const params = new URLSearchParams(searchParams.toString());
+    if (variant === "default") {
+      params.delete("variant");
+    } else {
+      params.set("variant", variant);
+    }
+    const qs = params.toString();
+    router.replace(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
+  }, [searchParams, pathname, router]);
 
   const variants = Object.entries(icon.variants).filter(
     ([, v]) => v !== undefined && v !== ""
@@ -290,7 +311,7 @@ export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps)
           <VariantPicker
             variants={variants as [string, string | undefined][]}
             activeVariant={activeVariant}
-            onSelect={setActiveVariant}
+            onSelect={handleVariantSelect}
             slug={icon.slug}
           />
 
@@ -351,6 +372,54 @@ export function IconDetailPage({ icon, relatedIcons = [] }: IconDetailPageProps)
           )}
         </div>
       </div>
+
+      {/* SEO content section - server-rendered unique text for Google */}
+      <section className="mt-10 rounded-xl border border-border/40 bg-card/30 p-6 dark:border-white/[0.04] dark:bg-white/[0.01]">
+        <h2 className="mb-3 text-sm font-semibold text-foreground">
+          About {icon.title} Icon
+        </h2>
+        <div className="space-y-2 text-xs leading-relaxed text-muted-foreground">
+          <p>
+            The {icon.title} SVG icon is available for free download on theSVG.
+            {variants.length > 1
+              ? ` This icon comes in ${variants.length} variants: ${variants.map(([name]) => name === "default" ? "color" : name).join(", ")}.`
+              : ""
+            }
+            {icon.categories.length > 0
+              ? ` Categorized under ${icon.categories.join(", ")}.`
+              : ""
+            }
+          </p>
+          <p>
+            Use this icon in your projects with React, Vue, Svelte, or plain HTML.
+            Available via npm (<code className="rounded bg-muted px-1 py-0.5 font-mono text-[10px]">@thesvg/react</code>),
+            CLI (<code className="rounded bg-muted px-1 py-0.5 font-mono text-[10px]">npx @thesvg/cli add {icon.slug}</code>),
+            or CDN (<code className="rounded bg-muted px-1 py-0.5 font-mono text-[10px]">cdn.jsdelivr.net/npm/@thesvg/icons/icons/{icon.slug}.svg</code>).
+          </p>
+          {icon.collection !== "brands" && (
+            <p>
+              Part of the {icon.collection === "aws" ? "AWS Architecture" : icon.collection === "azure" ? "Microsoft Azure" : icon.collection === "gcp" ? "Google Cloud Platform" : icon.collection} icon collection on theSVG.
+              {icon.collectionMeta?.type === "service" ? " This is a service-level icon used in architecture diagrams and documentation." : ""}
+            </p>
+          )}
+          <p>
+            License: {icon.license}. Free for personal and commercial use.
+            {icon.hex && icon.hex !== "000" ? ` Brand color: #${icon.hex}.` : ""}
+          </p>
+        </div>
+
+        {/* Quick usage reference - crawlable text */}
+        <details className="mt-4">
+          <summary className="cursor-pointer text-xs font-medium text-muted-foreground hover:text-foreground">
+            Quick usage reference
+          </summary>
+          <div className="mt-2 space-y-1.5 text-[11px] text-muted-foreground">
+            <p><strong>React:</strong> <code className="rounded bg-muted px-1 py-0.5 font-mono">{`import { ${icon.title.replace(/[^a-zA-Z0-9]/g, "")}Icon } from "@thesvg/react"`}</code></p>
+            <p><strong>HTML:</strong> <code className="rounded bg-muted px-1 py-0.5 font-mono">{`<img src="https://cdn.jsdelivr.net/npm/@thesvg/icons/icons/${icon.slug}.svg" alt="${icon.title}" />`}</code></p>
+            <p><strong>CLI:</strong> <code className="rounded bg-muted px-1 py-0.5 font-mono">{`npx @thesvg/cli add ${icon.slug}`}</code></p>
+          </div>
+        </details>
+      </section>
 
       {/* Trademark disclaimer */}
       <p className="mt-8 text-center text-xs leading-relaxed text-muted-foreground">

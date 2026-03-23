@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Submit an Icon | theSVG",
     description: "Submit your brand SVG to the open-source icon library.",
+    siteName: "theSVG",
   },
   alternates: { canonical: "https://thesvg.org/submit" },
 };

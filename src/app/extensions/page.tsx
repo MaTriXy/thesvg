@@ -20,11 +20,22 @@ import { SidebarShell } from "@/components/layout/sidebar-shell";
 export const metadata: Metadata = {
   title: "Extensions & Integrations - VS Code, Figma, React, CLI",
   description:
-    "Use 4,700+ free brand SVG icons in VS Code, Figma, Raycast, React, Vue, CLI, and more. npm packages, MCP server, and CDN integrations.",
+    "Use 5,500+ free SVG icons in VS Code, Figma, Raycast, React, Vue, CLI, and more. npm packages, MCP server, and CDN integrations.",
+  keywords: [
+    "SVG icon VS Code extension",
+    "SVG icon Figma plugin",
+    "brand icon npm package",
+    "SVG icon React component",
+    "SVG icon CLI",
+    "SVG icon CDN",
+    "MCP server icons",
+    "Raycast SVG icons",
+  ],
   openGraph: {
     title: "Extensions & Integrations | theSVG",
     description:
       "Use free brand SVG icons in VS Code, Figma, React, CLI, and more.",
+    siteName: "theSVG",
   },
   alternates: { canonical: "https://thesvg.org/extensions" },
 };
@@ -220,7 +231,7 @@ const CATEGORIES: Category[] = [
       },
       {
         name: "Raycast Extension",
-        description: "Search 4,000+ brand icons, copy SVG or CDN URL in one keystroke. Filter by category, preview variants.",
+        description: "Search 5,500+ icons, copy SVG or CDN URL in one keystroke. Filter by category, preview variants.",
         status: "available",
         cta: "GitHub",
         href: "https://github.com/GLINCKER/thesvg/tree/main/extensions/raycast",
